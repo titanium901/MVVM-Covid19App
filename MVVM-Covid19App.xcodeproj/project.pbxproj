@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA335248E63DA00EC168D /* AppDelegate.swift */; };
 		CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA337248E63DA00EC168D /* SceneDelegate.swift */; };
-		CA7BA33A248E63DA00EC168D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA339248E63DA00EC168D /* ViewController.swift */; };
-		CA7BA33D248E63DA00EC168D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA33B248E63DA00EC168D /* Main.storyboard */; };
 		CA7BA33F248E63DC00EC168D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA33E248E63DC00EC168D /* Assets.xcassets */; };
 		CA7BA342248E63DC00EC168D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA340248E63DC00EC168D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		CA7BA332248E63DA00EC168D /* MVVM-Covid19App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Covid19App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7BA335248E63DA00EC168D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA7BA337248E63DA00EC168D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA7BA339248E63DA00EC168D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CA7BA33C248E63DA00EC168D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA7BA33E248E63DC00EC168D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA7BA341248E63DC00EC168D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA7BA343248E63DC00EC168D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,13 +54,59 @@
 			children = (
 				CA7BA335248E63DA00EC168D /* AppDelegate.swift */,
 				CA7BA337248E63DA00EC168D /* SceneDelegate.swift */,
-				CA7BA339248E63DA00EC168D /* ViewController.swift */,
-				CA7BA33B248E63DA00EC168D /* Main.storyboard */,
-				CA7BA33E248E63DC00EC168D /* Assets.xcassets */,
-				CA7BA340248E63DC00EC168D /* LaunchScreen.storyboard */,
 				CA7BA343248E63DC00EC168D /* Info.plist */,
+				CA7BA34C248E662100EC168D /* InfoScreen */,
+				CA7BA34D248E666300EC168D /* Views */,
+				CA7BA34B248E661300EC168D /* ViewModel */,
+				CA7BA34A248E660A00EC168D /* Models */,
+				CA7BA349248E660100EC168D /* Managers */,
+				CA7BA34F248E669500EC168D /* Resourse */,
 			);
 			path = "MVVM-Covid19App";
+			sourceTree = "<group>";
+		};
+		CA7BA349248E660100EC168D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CA7BA34A248E660A00EC168D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA7BA34B248E661300EC168D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA7BA34C248E662100EC168D /* InfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InfoScreen;
+			sourceTree = "<group>";
+		};
+		CA7BA34D248E666300EC168D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA340248E63DC00EC168D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA7BA34F248E669500EC168D /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA33E248E63DC00EC168D /* Assets.xcassets */,
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +169,6 @@
 			files = (
 				CA7BA342248E63DC00EC168D /* LaunchScreen.storyboard in Resources */,
 				CA7BA33F248E63DC00EC168D /* Assets.xcassets in Resources */,
-				CA7BA33D248E63DA00EC168D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +179,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA7BA33A248E63DA00EC168D /* ViewController.swift in Sources */,
 				CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */,
 				CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CA7BA33B248E63DA00EC168D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA7BA33C248E63DA00EC168D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CA7BA340248E63DC00EC168D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IuriiPopov.MVVM-Covid19App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IuriiPopov.MVVM-Covid19App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
