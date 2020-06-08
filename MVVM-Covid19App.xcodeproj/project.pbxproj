@@ -11,6 +11,11 @@
 		CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA337248E63DA00EC168D /* SceneDelegate.swift */; };
 		CA7BA33F248E63DC00EC168D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA33E248E63DC00EC168D /* Assets.xcassets */; };
 		CA7BA342248E63DC00EC168D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA340248E63DC00EC168D /* LaunchScreen.storyboard */; };
+		CA7BA351248E6A0100EC168D /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */; };
+		CA7BA353248E6B8300EC168D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA352248E6B8300EC168D /* RootViewController.swift */; };
+		CA7BA355248E718300EC168D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA354248E718300EC168D /* InfoViewController.swift */; };
+		CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA356248E718F00EC168D /* MapViewController.swift */; };
+		CA7BA359248E719800EC168D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA358248E719800EC168D /* NewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		CA7BA33E248E63DC00EC168D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA7BA341248E63DC00EC168D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA7BA343248E63DC00EC168D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		CA7BA352248E6B8300EC168D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		CA7BA354248E718300EC168D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CA7BA356248E718F00EC168D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CA7BA358248E719800EC168D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +64,17 @@
 			children = (
 				CA7BA335248E63DA00EC168D /* AppDelegate.swift */,
 				CA7BA337248E63DA00EC168D /* SceneDelegate.swift */,
-				CA7BA343248E63DC00EC168D /* Info.plist */,
+				CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */,
+				CA7BA352248E6B8300EC168D /* RootViewController.swift */,
 				CA7BA34C248E662100EC168D /* InfoScreen */,
+				CA7BA35A248E71BE00EC168D /* MapScreen */,
+				CA7BA35B248E71CE00EC168D /* NewsScreen */,
 				CA7BA34D248E666300EC168D /* Views */,
 				CA7BA34B248E661300EC168D /* ViewModel */,
 				CA7BA34A248E660A00EC168D /* Models */,
 				CA7BA349248E660100EC168D /* Managers */,
 				CA7BA34F248E669500EC168D /* Resourse */,
+				CA7BA343248E63DC00EC168D /* Info.plist */,
 			);
 			path = "MVVM-Covid19App";
 			sourceTree = "<group>";
@@ -89,6 +103,7 @@
 		CA7BA34C248E662100EC168D /* InfoScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CA7BA354248E718300EC168D /* InfoViewController.swift */,
 			);
 			path = InfoScreen;
 			sourceTree = "<group>";
@@ -107,6 +122,22 @@
 				CA7BA33E248E63DC00EC168D /* Assets.xcassets */,
 			);
 			path = Resourse;
+			sourceTree = "<group>";
+		};
+		CA7BA35A248E71BE00EC168D /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA356248E718F00EC168D /* MapViewController.swift */,
+			);
+			path = MapScreen;
+			sourceTree = "<group>";
+		};
+		CA7BA35B248E71CE00EC168D /* NewsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA358248E719800EC168D /* NewsViewController.swift */,
+			);
+			path = NewsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7BA351248E6A0100EC168D /* ViewControllerFactory.swift in Sources */,
+				CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */,
 				CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */,
+				CA7BA353248E6B8300EC168D /* RootViewController.swift in Sources */,
+				CA7BA359248E719800EC168D /* NewsViewController.swift in Sources */,
 				CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */,
+				CA7BA355248E718300EC168D /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
