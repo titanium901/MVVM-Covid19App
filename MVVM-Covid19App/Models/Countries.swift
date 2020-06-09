@@ -6,8 +6,6 @@
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
-import Foundation
-
 struct Country: Codable {
     let country, countryCode, slug: String
     let newConfirmed, totalConfirmed, newDeaths, totalDeaths: Int

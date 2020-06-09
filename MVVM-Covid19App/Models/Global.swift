@@ -6,8 +6,6 @@
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
-import Foundation
-
 struct Global: Codable {
     let newConfirmed, totalConfirmed, newDeaths, totalDeaths: Int
     let newRecovered, totalRecovered: Int

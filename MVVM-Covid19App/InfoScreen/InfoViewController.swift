@@ -12,8 +12,9 @@ class InfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NetworkManagerCovid.getCovidStatus { (result) in
+       
+        let cv = CovidRepository(networkManager: NetworkManagerCovid())
+        cv.loadCovidFromNetwork { (cv, er) in
             
         }
     }

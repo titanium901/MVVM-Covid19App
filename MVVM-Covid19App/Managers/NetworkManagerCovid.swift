@@ -8,9 +8,9 @@
 
 import Alamofire
 
-enum NetworkManagerCovid {
+class NetworkManagerCovid {
     
-    static func getCovidStatus(completionHandler: @escaping (Result<Covid, Error>) -> Void) {
+     func getCovidStatus(completionHandler: @escaping (Result<Covid, Error>) -> Void) {
         AF.request("https://api.covid19api.com/summary", method: .get).responseJSON { response in
             switch response.result {
             case .success:
@@ -26,17 +26,6 @@ enum NetworkManagerCovid {
             case .failure(let error):
                 completionHandler(.failure(error))
             }
-        }
-    }
-}
-
-extension Result {
-    var value: Success? {
-        switch self  {
-        case .success(let success):
-            return success
-        case .failure:
-            return nil
         }
     }
 }

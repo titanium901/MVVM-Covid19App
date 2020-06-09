@@ -6,8 +6,6 @@
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
-import Foundation
-
 struct Covid: Codable {
     let global: Global
     let countries: [Country]
@@ -17,16 +15,5 @@ struct Covid: Codable {
         case global = "Global"
         case countries = "Countries"
         case date = "Date"
-    }
-    
-    func loadCovid(completion: @escaping (Covid?, Error?) -> Void) {
-        NetworkManagerCovid.getCovidStatus() { result in
-            switch result {
-            case .success(let covid):
-                completion(covid, nil)
-            case.failure(let error):
-                completion(nil, error)
-            }
-        }
     }
 }

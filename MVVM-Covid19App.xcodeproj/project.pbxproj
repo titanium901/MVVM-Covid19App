@@ -20,6 +20,8 @@
 		CA7BA35F248FAEC000EC168D /* NetworkManagerCovid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA35E248FAEC000EC168D /* NetworkManagerCovid.swift */; };
 		CA7BA361248FB1D800EC168D /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA360248FB1D800EC168D /* Countries.swift */; };
 		CA7BA363248FB2C800EC168D /* Covid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA362248FB2C800EC168D /* Covid.swift */; };
+		CA7BA367248FBC4300EC168D /* CovidRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA366248FBC4300EC168D /* CovidRepository.swift */; };
+		CA7BA36A248FBFBF00EC168D /* Result+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA369248FBFBF00EC168D /* Result+Ext.swift */; };
 		DA663795B00751E104CFDB53 /* Pods_MVVM_Covid19App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		CA7BA35E248FAEC000EC168D /* NetworkManagerCovid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerCovid.swift; sourceTree = "<group>"; };
 		CA7BA360248FB1D800EC168D /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		CA7BA362248FB2C800EC168D /* Covid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid.swift; sourceTree = "<group>"; };
+		CA7BA366248FBC4300EC168D /* CovidRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidRepository.swift; sourceTree = "<group>"; };
+		CA7BA369248FBFBF00EC168D /* Result+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Ext.swift"; sourceTree = "<group>"; };
 		EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Covid19App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +109,8 @@
 				CA7BA34B248E661300EC168D /* ViewModel */,
 				CA7BA34A248E660A00EC168D /* Models */,
 				CA7BA349248E660100EC168D /* Managers */,
+				CA7BA365248FBC2000EC168D /* Repositories */,
+				CA7BA368248FBFA400EC168D /* Extensions */,
 				CA7BA34F248E669500EC168D /* Resourse */,
 				CA7BA343248E63DC00EC168D /* Info.plist */,
 			);
@@ -122,9 +128,9 @@
 		CA7BA34A248E660A00EC168D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA7BA362248FB2C800EC168D /* Covid.swift */,
 				CA7BA35C248FACAF00EC168D /* Global.swift */,
 				CA7BA360248FB1D800EC168D /* Countries.swift */,
-				CA7BA362248FB2C800EC168D /* Covid.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +180,22 @@
 				CA7BA358248E719800EC168D /* NewsViewController.swift */,
 			);
 			path = NewsScreen;
+			sourceTree = "<group>";
+		};
+		CA7BA365248FBC2000EC168D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA366248FBC4300EC168D /* CovidRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CA7BA368248FBFA400EC168D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA369248FBFBF00EC168D /* Result+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +314,8 @@
 				CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */,
 				CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */,
 				CA7BA353248E6B8300EC168D /* RootViewController.swift in Sources */,
+				CA7BA367248FBC4300EC168D /* CovidRepository.swift in Sources */,
+				CA7BA36A248FBFBF00EC168D /* Result+Ext.swift in Sources */,
 				CA7BA359248E719800EC168D /* NewsViewController.swift in Sources */,
 				CA7BA35F248FAEC000EC168D /* NetworkManagerCovid.swift in Sources */,
 				CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */,
