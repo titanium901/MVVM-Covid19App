@@ -2,40 +2,41 @@
 //  CovidViewModel.swift
 //  MVVM-Covid19App
 //
-//  Created by Iury Popov on 09.06.2020.
+//  Created by Iury Popov on 10.06.2020.
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
 import Foundation
 
-final class CovidViewModel: CovidViewModelProtocol {
-    
-    var updateViewData: ((CovidViewData) -> ())?
-    
-    private let covidRepository: CovidRepository
-    
-    required init(covidRepository: CovidRepository) {
-        self.covidRepository = covidRepository
+protocol CovidViewModelProtocol {
+    init(globalViewModal: GlobalViewModel, countryViewModel: CountryViewModel)
+    var countries: [Country] { get }
+    var error: Error? { get }
+    func showCountriesInfo(completion: @escaping () -> Void)
+}
 
+final class CovidViewModel {
+    
+    var countries: [Country] = []
+    var error: Error?
+    
+    var globalViewModal: GlobalViewModelProtocol
+    var countryViewModel: CountryViewModel
+    
+    init(globalViewModal: GlobalViewModel, countryViewModel: CountryViewModel) {
+        self.globalViewModal = globalViewModal
+        self.countryViewModel = countryViewModel
     }
     
-    public func showGlobalInfo() {
-        updateViewData?(.loading)
-        
-        covidRepository.loadCovidFromNetwork { [weak self] covid, error in
-            self?.updateViewData?(.success(
-                CovidViewData.Covid(
-                    global: covid?.global,
-                    countries: nil,
-                    date: nil)
-                )
-            )
-            print("SOS ViewModel \(String(describing: covid?.global ?? nil))")
+    func showGlobalInfo() {
+        globalViewModal.fetchGlobalInfo()
+    }
+    
+    func showCountriesInfo(completion: @escaping () -> Void) {
+        countryViewModel.fetchCountriesInfo { [weak self] countries, error in
+            self?.countries = countries
+            self?.error = error
+            completion()
         }
     }
-    
-    public func showAllCountryInfo() {
-        
-    }
-    
 }

@@ -16,14 +16,58 @@ class GlobalInfoView: UIView {
         }
     }
     
-    private let newConfirmedLabel = update(UILabel()) {
-        $0.adjustsFontSizeToFitWidth = true
-        $0.textColor = .label
-        $0.minimumScaleFactor = 0.9
-        $0.lineBreakMode = .byTruncatingTail
-        $0.textAlignment = .center
-        $0.font = UIFont.systemFont(ofSize: 26, weight: .bold)
-        $0.text = "New Case Label"
+    private lazy var stackView = update(UIStackView()) {
+        $0.axis = .vertical
+        $0.distribution = .equalSpacing
+    }
+    
+    private lazy var dateLabel = update(UILabel()) {
+        $0.applyGlobalStyle()
+        $0.text = "Date:"
+    }
+    
+    private lazy var newConfirmedLabel = update(UILabel()) {
+        $0.applyGlobalStyle()
+        $0.text = "New confirmed:"
+    }
+    
+    private lazy var totalConfirmedLabel = update(UILabel()) {
+        $0.applyGlobalStyle()
+        $0.text = "Total confirmed:"
+    }
+    
+    private lazy var newDeathsLabel = update(UILabel()) {
+        $0.applyGlobalStyle()
+        $0.text = "New deaths:"
+    }
+    
+    private lazy var totalDeathsLabel = update(UILabel()) {
+        $0.applyGlobalStyle()
+        $0.text = "Total deaths:"
+    }
+    
+    private lazy var newRecoveredLabel = update(UILabel()) {
+        $0.applyGlobalStyle()
+        $0.text = "New recovered:"
+    }
+    
+    private lazy var totalRecoveredLabel = update(UILabel()) {
+        $0.applyGlobalStyle()
+        $0.text = "Total recovered:"
+    }
+    
+    lazy var tableView = update(UITableView()) {
+        $0.frame = self.bounds
+        $0.rowHeight = 150
+//        $0.removeExcessCells()
+        $0.register(CountryCell.self, forCellReuseIdentifier: CountryCell.reuseID)
+    }
+    
+    private lazy var activityIndicator = update(UIActivityIndicatorView()) {
+        $0.startAnimating()
+        $0.style = .large
+        $0.color = .systemBlue
+        $0.hidesWhenStopped = true
     }
     
     override init(frame: CGRect) {
@@ -36,10 +80,31 @@ class GlobalInfoView: UIView {
     }
     
     private func _setupLayout() {
-        addSubview(newConfirmedLabel, constraints: [
-            equal(\.topAnchor, \.safeAreaLayoutGuide.topAnchor, constant: 10),
+        stackView.addArrangedSubview(dateLabel)
+        stackView.addArrangedSubview(newConfirmedLabel)
+        stackView.addArrangedSubview(totalConfirmedLabel)
+        stackView.addArrangedSubview(newDeathsLabel)
+        stackView.addArrangedSubview(totalDeathsLabel)
+        stackView.addArrangedSubview(newRecoveredLabel)
+        stackView.addArrangedSubview(totalRecoveredLabel)
+        
+        addSubview(stackView, constraints: [
+            equal(\.topAnchor, \.safeAreaLayoutGuide.topAnchor, constant: 20),
             equal(\.leadingAnchor, constant: 20),
-            equal(\.trailingAnchor, constant: -20)
+            equal(\.trailingAnchor, constant: -20),
+            equal(\.heightAnchor, constant: 250)
+        ])
+        
+        addSubview(tableView, constraints: [
+            equal(\.topAnchor, to: stackView, \.bottomAnchor, constant: 5),
+            equal(\.leadingAnchor, constant: 0),
+            equal(\.trailingAnchor, constant: 0),
+            equal(\.bottomAnchor)
+        ])
+        
+        addSubview(activityIndicator, constraints: [
+            equal(\.centerYAnchor),
+            equal(\.centerXAnchor)
         ])
     }
     
@@ -52,13 +117,20 @@ class GlobalInfoView: UIView {
         case .loading:
             print("SOS loading")
         case .success(let success):
-            _update(covid: success)
+            activityIndicator.stopAnimating()
+            _update(viewData: success)
         case .failure:
             print("SOS fail")
         }
     }
     
-    private func _update(covid: CovidViewData.Covid) {
-        newConfirmedLabel.text = "\(covid.global?.newConfirmed)"
+    private func _update(viewData: CovidViewData.Covid) {
+        dateLabel.text = "Date: \(viewData.date ?? "")"
+        newConfirmedLabel.text = "New confirmed: \(viewData.global?.newConfirmed ?? 0)"
+        totalConfirmedLabel.text = "Total confirmed: \(viewData.global?.totalConfirmed ?? 0)"
+        newDeathsLabel.text = "New deaths: \(viewData.global?.newDeaths ?? 0)"
+        totalDeathsLabel.text = "Total deaths: \(viewData.global?.totalDeaths ?? 0)"
+        newRecoveredLabel.text = "New recovered: \(viewData.global?.newRecovered ?? 0)"
+        totalRecoveredLabel.text = "Total recovered: \(viewData.global?.totalRecovered ?? 0)"
     }
 }

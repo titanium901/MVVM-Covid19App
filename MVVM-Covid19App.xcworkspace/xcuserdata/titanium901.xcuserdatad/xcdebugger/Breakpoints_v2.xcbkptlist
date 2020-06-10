@@ -30,8 +30,8 @@
             filePath = "MVVM-Covid19App/Views/InfoScreen/InfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "_updateView()"
             landmarkType = "7">
             <Locations>

@@ -18,9 +18,9 @@ class InfoViewController: UIViewController {
         view = GlobalInfoView()
     }
     
-    private var viewModel: CovidViewModelProtocol
+    private var viewModel: CovidViewModel
     
-    init(viewModel: CovidViewModelProtocol) {
+    init(viewModel: CovidViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,13 +32,33 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        globalInfoView.tableView.delegate = self
+        globalInfoView.tableView.dataSource = self
+        
         viewModel.showGlobalInfo()
         _updateView()
+        viewModel.showCountriesInfo {
+            self.globalInfoView.tableView.reloadData()
+        }
     }
     
     private func _updateView() {
-        viewModel.updateViewData = { [weak self] viewData in
+        viewModel.globalViewModal.updateViewData = { [weak self] viewData in
             self?.globalInfoView.viewData = viewData
         }
+    }
+}
+
+extension InfoViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.countries.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CountryCell.reuseID) as! CountryCell
+        let country = viewModel.countries[indexPath.row]
+        cell.set(country: country)
+        return cell
     }
 }
