@@ -10,6 +10,16 @@ import UIKit
 
 class ViewControllerFactory {
     
+    private let networkManager: NetworkManagerCovid
+    private let covidRepository: CovidRepository
+    private let viewModel: CovidViewModelProtocol
+    
+    init() {
+        self.networkManager = NetworkManagerCovid()
+        self.covidRepository = CovidRepository(networkManager: networkManager)
+        self.viewModel = CovidViewModel(covidRepository: covidRepository)
+    }
+    
     func makeRootViewController() -> UIViewController {
         RootViewController(mainTabBarController: makeTabBarViewController())
     }
@@ -25,7 +35,7 @@ class ViewControllerFactory {
     }
     
     private func makeInfoViewController() -> UIViewController {
-        let infoVC = InfoViewController()
+        let infoVC = InfoViewController(viewModel: viewModel)
         infoVC.tabBarItem = UITabBarItem(
             title: "Info",
             image: UIImage(named: "infoIcon")?.withRenderingMode(.alwaysOriginal),
