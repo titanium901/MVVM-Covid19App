@@ -10,13 +10,13 @@ import Alamofire
 
 class NetworkManagerCovid {
     
-     func getCovidStatus(completionHandler: @escaping (Result<Covid, Error>) -> Void) {
+     func getCovidStatus(completionHandler: @escaping (Result<CovidViewData.Covid, Error>) -> Void) {
         AF.request("https://api.covid19api.com/summary", method: .get).responseJSON { response in
             switch response.result {
             case .success:
                 if let jsonData = response.data {
                     do {
-                        let covid = try JSONDecoder().decode(Covid.self, from: jsonData)
+                        let covid = try JSONDecoder().decode(CovidViewData.Covid.self, from: jsonData)
                         print("SOS \(covid.date)")
                         completionHandler(.success(covid))
                     } catch let error {

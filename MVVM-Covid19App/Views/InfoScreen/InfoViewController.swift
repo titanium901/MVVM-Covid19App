@@ -10,7 +10,15 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
-    let viewModel: CovidViewModelProtocol
+    private var globalInfoView: GlobalInfoView {
+        view as! GlobalInfoView
+    }
+    
+    override func loadView() {
+        view = GlobalInfoView()
+    }
+    
+    private var viewModel: CovidViewModelProtocol
     
     init(viewModel: CovidViewModelProtocol) {
         self.viewModel = viewModel
@@ -23,7 +31,14 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        view.backgroundColor = .white
         viewModel.showGlobalInfo()
+        _updateView()
+    }
+    
+    private func _updateView() {
+        viewModel.updateViewData = { [weak self] viewData in
+            self?.globalInfoView.viewData = viewData
+        }
     }
 }

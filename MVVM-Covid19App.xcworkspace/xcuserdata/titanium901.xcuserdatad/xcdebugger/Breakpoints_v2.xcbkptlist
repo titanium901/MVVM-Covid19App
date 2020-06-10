@@ -20,5 +20,116 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "031820A0-10D6-4C76-B450-0B5FD3324197"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVVM-Covid19App/Views/InfoScreen/InfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "_updateView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "031820A0-10D6-4C76-B450-0B5FD3324197 - ffd8d35b92ee268"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVVM_Covid19App.InfoViewController.(_updateView in _69BAA22A47C7EBC492137E0EE0FF4F48)() -&gt; ()"
+                  moduleName = "MVVM-Covid19App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/titanium901/Desktop/TUTULevelAp/MVVM-Covid19App/MVVM-Covid19App/Views/InfoScreen/InfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  uuid = "031820A0-10D6-4C76-B450-0B5FD3324197 - 7b5c50f7facd2394"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MVVM_Covid19App.ViewData) -&gt; () in MVVM_Covid19App.InfoViewController.(_updateView in _69BAA22A47C7EBC492137E0EE0FF4F48)() -&gt; ()"
+                  moduleName = "MVVM-Covid19App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/titanium901/Desktop/TUTULevelAp/MVVM-Covid19App/MVVM-Covid19App/Views/InfoScreen/InfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D411AB9-78D8-43BA-8ECA-F1CC3A33941A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVVM-Covid19App/Repositories/CovidRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "loadCovidFromNetwork(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D411AB9-78D8-43BA-8ECA-F1CC3A33941A - afa8d0db8354bcc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;MVVM_Covid19App.ViewData.Covid, Swift.Error&gt;) -&gt; () in MVVM_Covid19App.CovidRepository.loadCovidFromNetwork(completion: (Swift.Optional&lt;MVVM_Covid19App.ViewData.Covid&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MVVM-Covid19App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/titanium901/Desktop/TUTULevelAp/MVVM-Covid19App/MVVM-Covid19App/Repositories/CovidRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "7D411AB9-78D8-43BA-8ECA-F1CC3A33941A - afa8d0db8354bcc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;MVVM_Covid19App.ViewData.Covid, Swift.Error&gt;) -&gt; () in MVVM_Covid19App.CovidRepository.loadCovidFromNetwork(completion: (Swift.Optional&lt;MVVM_Covid19App.ViewData.Covid&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MVVM-Covid19App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/titanium901/Desktop/TUTULevelAp/MVVM-Covid19App/MVVM-Covid19App/Repositories/CovidRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "7D411AB9-78D8-43BA-8ECA-F1CC3A33941A - afa8d0db8354bcc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;MVVM_Covid19App.ViewData.Covid, Swift.Error&gt;) -&gt; () in MVVM_Covid19App.CovidRepository.loadCovidFromNetwork(completion: (Swift.Optional&lt;MVVM_Covid19App.ViewData.Covid&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MVVM-Covid19App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/titanium901/Desktop/TUTULevelAp/MVVM-Covid19App/MVVM-Covid19App/Repositories/CovidRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "898">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

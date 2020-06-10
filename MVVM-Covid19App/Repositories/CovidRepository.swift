@@ -14,7 +14,7 @@ class CovidRepository {
         self.networkManager = networkManager
     }
     
-    func loadCovidFromNetwork(completion: @escaping (Covid?, Error?) -> Void) {
+    func loadCovidFromNetwork(completion: @escaping (CovidViewData.Covid?, Error?) -> Void) {
         networkManager.getCovidStatus() { result in
             switch result {
             case .success(let covid):

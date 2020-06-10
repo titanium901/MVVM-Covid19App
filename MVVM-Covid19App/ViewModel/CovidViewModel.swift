@@ -8,21 +8,33 @@
 
 import Foundation
 
-class CovidViewModel: CovidViewModelProtocol {
+final class CovidViewModel: CovidViewModelProtocol {
     
-    let covidRepository: CovidRepository
+    var updateViewData: ((CovidViewData) -> ())?
+    
+    private let covidRepository: CovidRepository
     
     required init(covidRepository: CovidRepository) {
         self.covidRepository = covidRepository
+
     }
     
-    func showGlobalInfo() {
-        covidRepository.loadCovidFromNetwork { covid, error in
-            print("SOS ViewModel \(covid?.global)")
+    public func showGlobalInfo() {
+        updateViewData?(.loading)
+        
+        covidRepository.loadCovidFromNetwork { [weak self] covid, error in
+            self?.updateViewData?(.success(
+                CovidViewData.Covid(
+                    global: covid?.global,
+                    countries: nil,
+                    date: nil)
+                )
+            )
+            print("SOS ViewModel \(String(describing: covid?.global ?? nil))")
         }
     }
     
-    func showAllCountryInfo() {
+    public func showAllCountryInfo() {
         
     }
     

@@ -24,6 +24,9 @@
 		CA7BA36A248FBFBF00EC168D /* Result+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA369248FBFBF00EC168D /* Result+Ext.swift */; };
 		CA7BA36C248FD74A00EC168D /* CovidViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA36B248FD74A00EC168D /* CovidViewModelProtocol.swift */; };
 		CA7BA36E248FD75C00EC168D /* CovidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA36D248FD75C00EC168D /* CovidViewModel.swift */; };
+		CA7BA3712490DF9400EC168D /* PublicFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3702490DF9400EC168D /* PublicFunc.swift */; };
+		CA7BA3732490E13A00EC168D /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3722490E13A00EC168D /* UIView + Ext.swift */; };
+		CA7BA3752490E81800EC168D /* GlobalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3742490E81800EC168D /* GlobalInfoView.swift */; };
 		DA663795B00751E104CFDB53 /* Pods_MVVM_Covid19App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		CA7BA369248FBFBF00EC168D /* Result+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Ext.swift"; sourceTree = "<group>"; };
 		CA7BA36B248FD74A00EC168D /* CovidViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewModelProtocol.swift; sourceTree = "<group>"; };
 		CA7BA36D248FD75C00EC168D /* CovidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewModel.swift; sourceTree = "<group>"; };
+		CA7BA3702490DF9400EC168D /* PublicFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFunc.swift; sourceTree = "<group>"; };
+		CA7BA3722490E13A00EC168D /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
+		CA7BA3742490E81800EC168D /* GlobalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalInfoView.swift; sourceTree = "<group>"; };
 		EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Covid19App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,7 @@
 				CA7BA34B248E661300EC168D /* ViewModel */,
 				CA7BA34D248E666300EC168D /* Views */,
 				CA7BA368248FBFA400EC168D /* Extensions */,
+				CA7BA36F2490DF6F00EC168D /* Helpers */,
 				CA7BA34F248E669500EC168D /* Resourse */,
 				CA7BA343248E63DC00EC168D /* Info.plist */,
 			);
@@ -149,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				CA7BA354248E718300EC168D /* InfoViewController.swift */,
+				CA7BA3742490E81800EC168D /* GlobalInfoView.swift */,
 			);
 			path = InfoScreen;
 			sourceTree = "<group>";
@@ -200,8 +208,17 @@
 			isa = PBXGroup;
 			children = (
 				CA7BA369248FBFBF00EC168D /* Result+Ext.swift */,
+				CA7BA3722490E13A00EC168D /* UIView + Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA7BA36F2490DF6F00EC168D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA3702490DF9400EC168D /* PublicFunc.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,9 +335,11 @@
 				CA7BA36E248FD75C00EC168D /* CovidViewModel.swift in Sources */,
 				CA7BA35D248FACAF00EC168D /* Global.swift in Sources */,
 				CA7BA351248E6A0100EC168D /* ViewControllerFactory.swift in Sources */,
+				CA7BA3732490E13A00EC168D /* UIView + Ext.swift in Sources */,
 				CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */,
 				CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */,
 				CA7BA353248E6B8300EC168D /* RootViewController.swift in Sources */,
+				CA7BA3712490DF9400EC168D /* PublicFunc.swift in Sources */,
 				CA7BA367248FBC4300EC168D /* CovidRepository.swift in Sources */,
 				CA7BA36A248FBFBF00EC168D /* Result+Ext.swift in Sources */,
 				CA7BA359248E719800EC168D /* NewsViewController.swift in Sources */,
@@ -328,6 +347,7 @@
 				CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */,
 				CA7BA363248FB2C800EC168D /* Covid.swift in Sources */,
 				CA7BA361248FB1D800EC168D /* Countries.swift in Sources */,
+				CA7BA3752490E81800EC168D /* GlobalInfoView.swift in Sources */,
 				CA7BA36C248FD74A00EC168D /* CovidViewModelProtocol.swift in Sources */,
 				CA7BA355248E718300EC168D /* InfoViewController.swift in Sources */,
 			);

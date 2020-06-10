@@ -10,6 +10,7 @@ import Foundation
 
 protocol CovidViewModelProtocol {
     init(covidRepository: CovidRepository)
+    var updateViewData: ((CovidViewData) ->())? { get set }
     func showGlobalInfo()
     func showAllCountryInfo()
 }
