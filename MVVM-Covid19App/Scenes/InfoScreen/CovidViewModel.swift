@@ -8,6 +8,7 @@
 
 import Foundation
 
+// неиспользуется
 protocol CovidViewModelProtocol {
     init(globalViewModal: GlobalViewModel, countryViewModel: CountryViewModel)
     var countries: [Country] { get }
@@ -15,8 +16,10 @@ protocol CovidViewModelProtocol {
     func showCountriesInfo(completion: @escaping () -> Void)
 }
 
+// CovidViewModelImp: CovidViewModel
 final class CovidViewModel {
-    
+
+    // private?
     var countries: [Country] = []
     var error: Error?
     

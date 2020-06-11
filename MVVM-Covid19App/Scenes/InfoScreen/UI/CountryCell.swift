@@ -49,7 +49,8 @@ class CountryCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    // render()
     func set(country: Country) {
         countryName.text = "Country: \(country.country)"
         newConfirmed.text = "NewConfirmed: \(country.newConfirmed)"
@@ -70,6 +71,18 @@ class CountryCell: UITableViewCell {
         stackView.addArrangedSubview(totalRecovered)
         
         addSubview(stackView, constraints: .allAnchors)
+    }
+}
+
+private extension UILabel {
+    func applyStyleForCountryCell() {
+        textAlignment = .left
+        adjustsFontSizeToFitWidth = true
+        textColor = .label
+        minimumScaleFactor = 0.9
+        lineBreakMode = .byTruncatingTail
+        textAlignment = .center
+        font = UIFont.systemFont(ofSize: 15, weight: .bold)
     }
 }
 

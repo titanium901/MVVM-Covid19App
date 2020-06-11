@@ -8,15 +8,16 @@
 
 import Foundation
 
+// лучше объединять по модулю
 protocol GlobalViewModelProtocol {
     init(covidRepository: CovidRepository)
-    var updateViewData: ((CovidViewData) ->())? { get set }
+    var updateViewData: ((GlobalInfoView.ViewState) ->())? { get set }
     func fetchGlobalInfo()
 }
 
 final class GlobalViewModel: GlobalViewModelProtocol {
     
-    var updateViewData: ((CovidViewData) -> ())?
+    var updateViewData: ((GlobalInfoView.ViewState) -> ())?
     
     private let covidRepository: CovidRepository
     
@@ -29,7 +30,7 @@ final class GlobalViewModel: GlobalViewModelProtocol {
         
         covidRepository.loadCovidFromNetwork { [weak self] covid, error in
             self?.updateViewData?(.success(
-                CovidViewData.Covid(
+                Covid(
                     global: covid?.global,
                     countries: nil,
                     date: covid?.date)

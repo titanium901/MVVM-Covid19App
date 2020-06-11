@@ -7,6 +7,7 @@
 //
 
 struct Global: Codable {
+    // так лучше не делать
     let newConfirmed, totalConfirmed, newDeaths, totalDeaths: Int
     let newRecovered, totalRecovered: Int
 

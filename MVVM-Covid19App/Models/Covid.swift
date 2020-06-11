@@ -6,21 +6,23 @@
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
-enum CovidViewData {
-    case initial
-    case loading
-    case success(Covid)
-    case failure
-    
-    struct Covid: Codable {
-        let global: Global?
-        let countries: [Country]?
-        let date: String?
+//enum CovidViewData {
+//    // относится к модулю
+//    case initial
+//    case loading
+//    case success(Covid)
+//    case failure
+//    
+//
+//}
+struct Covid: Codable {
+    let global: Global?
+    let countries: [Country]?
+    let date: String?
 
-        enum CodingKeys: String, CodingKey {
-            case global = "Global"
-            case countries = "Countries"
-            case date = "Date"
-        }
+    enum CodingKeys: String, CodingKey {
+        case global = "Global"
+        case countries = "Countries"
+        case date = "Date"
     }
 }

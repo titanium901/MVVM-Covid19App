@@ -9,12 +9,13 @@
 import UIKit
 
 class GlobalInfoView: UIView {
-    
-    var viewData: CovidViewData = .initial {
-        didSet {
-            setNeedsLayout()
-        }
-    }
+
+    // зачем вью хранит модель?
+//    var viewData: CovidViewData = .initial {
+//        didSet {
+//            setNeedsLayout()
+//        }
+//    }
     
     private lazy var stackView = update(UIStackView()) {
         $0.axis = .vertical
@@ -69,6 +70,15 @@ class GlobalInfoView: UIView {
         $0.color = .systemBlue
         $0.hidesWhenStopped = true
     }
+
+    var tableViewDelegate: UITableViewDelegate? {
+        get {
+            tableView.delegate
+        }
+        set {
+            tableView.delegate = newValue
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -107,24 +117,48 @@ class GlobalInfoView: UIView {
             equal(\.centerXAnchor)
         ])
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        switch viewData {
+
+    // зачем layoutSubviews?
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//
+//        switch viewData {
+//        case .initial:
+//            print("SOS initial")
+//        case .loading:
+//            print("SOS loading")
+//        case .success(let success):
+//            activityIndicator.stopAnimating()
+//            _update(viewData: success)
+//        case .failure:
+//            print("SOS fail")
+//        }
+//    }
+}
+
+extension GlobalInfoView {
+    enum ViewState {
+        case initial
+        case loading
+        case success(Covid)
+        case failure
+    }
+
+    func render(_ state: ViewState) {
+        switch state {
         case .initial:
             print("SOS initial")
         case .loading:
             print("SOS loading")
         case .success(let success):
             activityIndicator.stopAnimating()
-            _update(viewData: success)
+            _render(viewData: success)
         case .failure:
             print("SOS fail")
         }
     }
-    
-    private func _update(viewData: CovidViewData.Covid) {
+
+    private func _render(viewData: Covid) {
         dateLabel.text = "Date: \(viewData.date ?? "")"
         newConfirmedLabel.text = "New confirmed: \(viewData.global?.newConfirmed ?? 0)"
         totalConfirmedLabel.text = "Total confirmed: \(viewData.global?.totalConfirmed ?? 0)"

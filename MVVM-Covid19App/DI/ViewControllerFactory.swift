@@ -8,6 +8,11 @@
 
 import UIKit
 
+//class ServiceFactory {
+//    private let networkManager: NetworkManagerCovid
+//    private let covidRepository: CovidRepository
+//}
+
 class ViewControllerFactory {
     
     private let networkManager: NetworkManagerCovid
@@ -39,6 +44,7 @@ class ViewControllerFactory {
     }
     
     private func makeInfoViewController() -> UIViewController {
+//        let invoVC = InfoScreenAssembly(service: service)
         let infoVC = InfoViewController(viewModel: viewModel)
         infoVC.tabBarItem = UITabBarItem(
             title: "Info",

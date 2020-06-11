@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EE012F124925FB800CA47FB /* InfoScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE012F024925FB800CA47FB /* InfoScreenAssembly.swift */; };
 		CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA335248E63DA00EC168D /* AppDelegate.swift */; };
 		CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA337248E63DA00EC168D /* SceneDelegate.swift */; };
 		CA7BA33F248E63DC00EC168D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA33E248E63DC00EC168D /* Assets.xcassets */; };
@@ -23,8 +24,8 @@
 		CA7BA367248FBC4300EC168D /* CovidRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA366248FBC4300EC168D /* CovidRepository.swift */; };
 		CA7BA36A248FBFBF00EC168D /* Result+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA369248FBFBF00EC168D /* Result+Ext.swift */; };
 		CA7BA36E248FD75C00EC168D /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA36D248FD75C00EC168D /* GlobalViewModel.swift */; };
-		CA7BA3712490DF9400EC168D /* PublicFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3702490DF9400EC168D /* PublicFunc.swift */; };
-		CA7BA3732490E13A00EC168D /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3722490E13A00EC168D /* UIView+Ext.swift */; };
+		CA7BA3712490DF9400EC168D /* ConfigObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3702490DF9400EC168D /* ConfigObject.swift */; };
+		CA7BA3732490E13A00EC168D /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3722490E13A00EC168D /* AutoLayout.swift */; };
 		CA7BA3752490E81800EC168D /* GlobalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3742490E81800EC168D /* GlobalInfoView.swift */; };
 		CA7BA3792491144700EC168D /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3782491144700EC168D /* CountryCell.swift */; };
 		CA7BA37B2491174300EC168D /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA37A2491174300EC168D /* UILabel+Ext.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		662C2612FC22078BD152FCA2 /* Pods-MVVM-Covid19App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Covid19App.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Covid19App/Pods-MVVM-Covid19App.release.xcconfig"; sourceTree = "<group>"; };
+		8EE012F024925FB800CA47FB /* InfoScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenAssembly.swift; sourceTree = "<group>"; };
 		B7D64F6D18A1B76ED0450FC1 /* Pods-MVVM-Covid19App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Covid19App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Covid19App/Pods-MVVM-Covid19App.debug.xcconfig"; sourceTree = "<group>"; };
 		CA7BA332248E63DA00EC168D /* MVVM-Covid19App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Covid19App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7BA335248E63DA00EC168D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +56,8 @@
 		CA7BA366248FBC4300EC168D /* CovidRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidRepository.swift; sourceTree = "<group>"; };
 		CA7BA369248FBFBF00EC168D /* Result+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Ext.swift"; sourceTree = "<group>"; };
 		CA7BA36D248FD75C00EC168D /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
-		CA7BA3702490DF9400EC168D /* PublicFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFunc.swift; sourceTree = "<group>"; };
-		CA7BA3722490E13A00EC168D /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		CA7BA3702490DF9400EC168D /* ConfigObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigObject.swift; sourceTree = "<group>"; };
+		CA7BA3722490E13A00EC168D /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		CA7BA3742490E81800EC168D /* GlobalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalInfoView.swift; sourceTree = "<group>"; };
 		CA7BA3782491144700EC168D /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		CA7BA37A2491174300EC168D /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
@@ -93,6 +95,89 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E546129249255CD00479E5B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8E54612B249257FD00479E5B /* RootScreen */,
+				CA7BA34C248E662100EC168D /* InfoScreen */,
+				CA7BA35B248E71CE00EC168D /* NewsScreen */,
+				CA7BA35A248E71BE00EC168D /* MapScreen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8E54612A249255E400479E5B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA354248E718300EC168D /* InfoViewController.swift */,
+				CA7BA3742490E81800EC168D /* GlobalInfoView.swift */,
+				CA7BA3782491144700EC168D /* CountryCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8E54612B249257FD00479E5B /* RootScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA352248E6B8300EC168D /* RootViewController.swift */,
+			);
+			path = RootScreen;
+			sourceTree = "<group>";
+		};
+		8E54612C2492580900479E5B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		8E54612D2492581400479E5B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA343248E63DC00EC168D /* Info.plist */,
+				CA7BA340248E63DC00EC168D /* LaunchScreen.storyboard */,
+				CA7BA335248E63DA00EC168D /* AppDelegate.swift */,
+				CA7BA337248E63DA00EC168D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8E54612E2492583400479E5B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8E54612F2492584300479E5B /* Models */,
+				CA7BA349248E660100EC168D /* Managers */,
+				CA7BA365248FBC2000EC168D /* Repositories */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8E54612F2492584300479E5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E5461302492588C00479E5B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8E546131249258F300479E5B /* UI */,
+				CA7BA368248FBFA400EC168D /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8E546131249258F300479E5B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA3702490DF9400EC168D /* ConfigObject.swift */,
+				CA7BA3722490E13A00EC168D /* AutoLayout.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		CA7BA329248E63DA00EC168D = {
 			isa = PBXGroup;
 			children = (
@@ -114,19 +199,15 @@
 		CA7BA334248E63DA00EC168D /* MVVM-Covid19App */ = {
 			isa = PBXGroup;
 			children = (
-				CA7BA335248E63DA00EC168D /* AppDelegate.swift */,
-				CA7BA337248E63DA00EC168D /* SceneDelegate.swift */,
-				CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */,
-				CA7BA352248E6B8300EC168D /* RootViewController.swift */,
+				8E54612D2492581400479E5B /* App */,
+				8E5461302492588C00479E5B /* Core */,
+				8E54612C2492580900479E5B /* DI */,
+				8E54612E2492583400479E5B /* Services */,
 				CA7BA34A248E660A00EC168D /* Models */,
-				CA7BA349248E660100EC168D /* Managers */,
-				CA7BA365248FBC2000EC168D /* Repositories */,
-				CA7BA34B248E661300EC168D /* ViewModel */,
-				CA7BA34D248E666300EC168D /* Views */,
-				CA7BA368248FBFA400EC168D /* Extensions */,
+				CA7BA34B248E661300EC168D /* ViewModel (Remove) */,
+				8E546129249255CD00479E5B /* Scenes */,
 				CA7BA36F2490DF6F00EC168D /* Helpers */,
 				CA7BA34F248E669500EC168D /* Resourse */,
-				CA7BA343248E63DC00EC168D /* Info.plist */,
 			);
 			path = "MVVM-Covid19App";
 			sourceTree = "<group>";
@@ -149,35 +230,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		CA7BA34B248E661300EC168D /* ViewModel */ = {
+		CA7BA34B248E661300EC168D /* ViewModel (Remove) */ = {
 			isa = PBXGroup;
 			children = (
 				CA7BA36D248FD75C00EC168D /* GlobalViewModel.swift */,
 				CA7BA37C2491306600EC168D /* CountryViewModel.swift */,
-				CA7BA380249131C900EC168D /* CovidViewModel.swift */,
 			);
-			path = ViewModel;
+			path = "ViewModel (Remove)";
 			sourceTree = "<group>";
 		};
 		CA7BA34C248E662100EC168D /* InfoScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CA7BA354248E718300EC168D /* InfoViewController.swift */,
-				CA7BA3742490E81800EC168D /* GlobalInfoView.swift */,
-				CA7BA3782491144700EC168D /* CountryCell.swift */,
+				8E54612A249255E400479E5B /* UI */,
+				CA7BA380249131C900EC168D /* CovidViewModel.swift */,
+				8EE012F024925FB800CA47FB /* InfoScreenAssembly.swift */,
 			);
 			path = InfoScreen;
-			sourceTree = "<group>";
-		};
-		CA7BA34D248E666300EC168D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CA7BA34C248E662100EC168D /* InfoScreen */,
-				CA7BA35B248E71CE00EC168D /* NewsScreen */,
-				CA7BA35A248E71BE00EC168D /* MapScreen */,
-				CA7BA340248E63DC00EC168D /* LaunchScreen.storyboard */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CA7BA34F248E669500EC168D /* Resourse */ = {
@@ -216,7 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				CA7BA369248FBFBF00EC168D /* Result+Ext.swift */,
-				CA7BA3722490E13A00EC168D /* UIView+Ext.swift */,
 				CA7BA37A2491174300EC168D /* UILabel+Ext.swift */,
 			);
 			path = Extensions;
@@ -225,7 +293,6 @@
 		CA7BA36F2490DF6F00EC168D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CA7BA3702490DF9400EC168D /* PublicFunc.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -321,17 +388,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM-Covid19App/Pods-MVVM-Covid19App-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM-Covid19App/Pods-MVVM-Covid19App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM-Covid19App/Pods-MVVM-Covid19App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVM-Covid19App/Pods-MVVM-Covid19App-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM-Covid19App/Pods-MVVM-Covid19App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -342,14 +408,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA7BA36E248FD75C00EC168D /* GlobalViewModel.swift in Sources */,
+				8EE012F124925FB800CA47FB /* InfoScreenAssembly.swift in Sources */,
 				CA7BA381249131C900EC168D /* CovidViewModel.swift in Sources */,
 				CA7BA35D248FACAF00EC168D /* Global.swift in Sources */,
 				CA7BA351248E6A0100EC168D /* ViewControllerFactory.swift in Sources */,
-				CA7BA3732490E13A00EC168D /* UIView+Ext.swift in Sources */,
+				CA7BA3732490E13A00EC168D /* AutoLayout.swift in Sources */,
 				CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */,
 				CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */,
 				CA7BA353248E6B8300EC168D /* RootViewController.swift in Sources */,
-				CA7BA3712490DF9400EC168D /* PublicFunc.swift in Sources */,
+				CA7BA3712490DF9400EC168D /* ConfigObject.swift in Sources */,
 				CA7BA37B2491174300EC168D /* UILabel+Ext.swift in Sources */,
 				CA7BA367248FBC4300EC168D /* CovidRepository.swift in Sources */,
 				CA7BA36A248FBFBF00EC168D /* Result+Ext.swift in Sources */,
@@ -500,7 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54SGD4HVN5;
-				INFOPLIST_FILE = "MVVM-Covid19App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVVM-Covid19App/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,7 +586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54SGD4HVN5;
-				INFOPLIST_FILE = "MVVM-Covid19App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVVM-Covid19App/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

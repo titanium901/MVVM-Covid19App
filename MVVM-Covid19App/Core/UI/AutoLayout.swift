@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Похоже что надо навзвать файл Autolayout
 extension UIView {
 
     /// Добавляет childView с активацией констреинтов

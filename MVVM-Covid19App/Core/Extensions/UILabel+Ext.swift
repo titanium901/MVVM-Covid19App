@@ -17,14 +17,4 @@ extension UILabel {
         textAlignment = .left
         font = UIFont.systemFont(ofSize: 26, weight: .bold)
     }
-    
-    func applyStyleForCountryCell() {
-        textAlignment = .left
-        adjustsFontSizeToFitWidth = true
-        textColor = .label
-        minimumScaleFactor = 0.9
-        lineBreakMode = .byTruncatingTail
-        textAlignment = .center
-        font = UIFont.systemFont(ofSize: 15, weight: .bold)
-    }
 }
