@@ -53,7 +53,7 @@ class InfoViewController: UIViewController {
 
     // метод по факту делает subscribeOnChanges
     private func _updateView() {
-        viewModel.globalViewModal.updateViewData = { [weak self] viewData in
+        viewModel.updateViewData = { [weak self] viewData in
             self?.globalInfoView.render(viewData)
 //            self?.globalInfoView.viewData = viewData
         }

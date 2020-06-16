@@ -17,16 +17,12 @@ class ViewControllerFactory {
     
     private let networkManager: NetworkManagerCovid
     private let covidRepository: CovidRepository
-    private let globalViewModal: GlobalViewModel
-    private let countryViewModel: CountryViewModel
     private let viewModel: CovidViewModel
     
     init() {
         self.networkManager = NetworkManagerCovid()
         self.covidRepository = CovidRepository(networkManager: networkManager)
-        self.globalViewModal = GlobalViewModel(covidRepository: covidRepository)
-        self.countryViewModel = CountryViewModel(covidRepository: covidRepository)
-        self.viewModel = CovidViewModel(globalViewModal: globalViewModal, countryViewModel: countryViewModel)
+        self.viewModel = CovidViewModel(covidRepository: covidRepository)
     }
     
     func makeRootViewController() -> UIViewController {

@@ -8,38 +8,49 @@
 
 import Foundation
 
-// неиспользуется
 protocol CovidViewModelProtocol {
-    init(globalViewModal: GlobalViewModel, countryViewModel: CountryViewModel)
+    init(covidRepository: CovidRepository)
     var countries: [Country] { get }
     var error: Error? { get }
     func showCountriesInfo(completion: @escaping () -> Void)
+    func showGlobalInfo()
+    var updateViewData: ((GlobalInfoView.ViewState) ->())? { get set }
 }
 
 // CovidViewModelImp: CovidViewModel
-final class CovidViewModel {
+final class CovidViewModel: CovidViewModelProtocol {
+    
+    private let covidRepository: CovidRepository
+    var updateViewData: ((GlobalInfoView.ViewState) -> ())?
 
-    // private?
-    var countries: [Country] = []
-    var error: Error?
+    internal var countries: [Country] = []
+    internal var error: Error?
     
-    var globalViewModal: GlobalViewModelProtocol
-    var countryViewModel: CountryViewModel
-    
-    init(globalViewModal: GlobalViewModel, countryViewModel: CountryViewModel) {
-        self.globalViewModal = globalViewModal
-        self.countryViewModel = countryViewModel
+    init(covidRepository: CovidRepository) {
+        self.covidRepository = covidRepository
     }
     
     func showGlobalInfo() {
-        globalViewModal.fetchGlobalInfo()
+        updateViewData?(.loading)
+        
+        covidRepository.loadCovidFromNetwork { [weak self] covid, error in
+            self?.updateViewData?(.success(
+                Covid(
+                    global: covid?.global,
+                    countries: nil,
+                    date: covid?.date)
+                )
+            )
+            print("SOS showGlobalInfo \(String(describing: covid?.date ?? nil))")
+        }
     }
     
     func showCountriesInfo(completion: @escaping () -> Void) {
-        countryViewModel.fetchCountriesInfo { [weak self] countries, error in
-            self?.countries = countries
+        covidRepository.loadCovidFromNetwork { [weak self] covid, error in
+            self?.countries = covid?.countries ?? []
             self?.error = error
             completion()
+            print("SOS showCountriesInfo \(String(describing: covid?.countries?.count ?? nil))")
         }
     }
 }
