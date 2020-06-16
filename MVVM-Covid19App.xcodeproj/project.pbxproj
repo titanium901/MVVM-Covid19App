@@ -31,6 +31,7 @@
 		CA7BA381249131C900EC168D /* CovidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA380249131C900EC168D /* CovidViewModel.swift */; };
 		CA7BA3872499004E00EC168D /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA3862499004E00EC168D /* UIImage+Ext.swift */; };
 		CA7BA3892499008700EC168D /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA3882499008700EC168D /* load.gif */; };
+		CA7BA38B24990ADC00EC168D /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA38A24990ADC00EC168D /* ServiceFactory.swift */; };
 		DA663795B00751E104CFDB53 /* Pods_MVVM_Covid19App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		CA7BA380249131C900EC168D /* CovidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewModel.swift; sourceTree = "<group>"; };
 		CA7BA3862499004E00EC168D /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		CA7BA3882499008700EC168D /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = load.gif; sourceTree = "<group>"; };
+		CA7BA38A24990ADC00EC168D /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Covid19App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 				8E54612F2492584300479E5B /* Models */,
 				CA7BA349248E660100EC168D /* Managers */,
 				CA7BA365248FBC2000EC168D /* Repositories */,
+				CA7BA38A24990ADC00EC168D /* ServiceFactory.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				CA7BA381249131C900EC168D /* CovidViewModel.swift in Sources */,
 				CA7BA35D248FACAF00EC168D /* Global.swift in Sources */,
 				CA7BA351248E6A0100EC168D /* ViewControllerFactory.swift in Sources */,
+				CA7BA38B24990ADC00EC168D /* ServiceFactory.swift in Sources */,
 				CA7BA3732490E13A00EC168D /* AutoLayout.swift in Sources */,
 				CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */,
 				CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */,

@@ -47,15 +47,13 @@ class InfoViewController: UIViewController {
         globalInfoView.tableView.delegate = self
         globalInfoView.tableView.dataSource = self
 
-        viewModel.showGlobalInfo() // viewModel.viewDidLoad()
-        _updateView()
+        viewModel.viewDidLoad()
+        _subscribeOnChanges()
     }
 
-    // метод по факту делает subscribeOnChanges
-    private func _updateView() {
+    private func _subscribeOnChanges() {
         viewModel.updateViewData = { [weak self] viewData in
             self?.globalInfoView.render(viewData)
-//            self?.globalInfoView.viewData = viewData
         }
         viewModel.showCountriesInfo {
             self.globalInfoView.tableView.reloadData()
@@ -93,7 +91,7 @@ extension InfoViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CountryCell.reuseID) as! CountryCell
         let country = viewModel.countries[indexPath.row]
-        cell.set(country: country) // render и будет datadriven
+        cell.render(country: country) // render и будет datadriven
         return cell
     }
 }

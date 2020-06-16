@@ -6,15 +6,6 @@
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
-//enum CovidViewData {
-//    // относится к модулю
-//    case initial
-//    case loading
-//    case success(Covid)
-//    case failure
-//    
-//
-//}
 struct Covid: Codable {
     let global: Global?
     let countries: [Country]?

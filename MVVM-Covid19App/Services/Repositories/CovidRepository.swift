@@ -6,10 +6,15 @@
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
+ protocol LoadCovidInfo {
+    func loadCovidFromNetwork(completion: @escaping (Covid?, Error?) -> Void)
+    func loadCovidFromDB()
+}
+
 // зачем нужен?
-class CovidRepository {
+class CovidRepository: LoadCovidInfo {
     
-    let networkManager: NetworkManagerCovid!
+    private let networkManager: NetworkManagerCovid!
     // database
     
     init(networkManager: NetworkManagerCovid) {
@@ -28,4 +33,6 @@ class CovidRepository {
             }
         }
     }
+    
+    func loadCovidFromDB() {}
 }

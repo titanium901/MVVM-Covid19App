@@ -8,8 +8,7 @@
 
 import Alamofire
 
-// почему не структура?
-class NetworkManagerCovid {
+struct NetworkManagerCovid {
     
      func getCovidStatus(completionHandler: @escaping (Result<Covid, Error>) -> Void) {
         AF.request("https://api.covid19api.com/summary", method: .get).responseJSON { response in
@@ -18,7 +17,7 @@ class NetworkManagerCovid {
                 if let jsonData = response.data {
                     do {
                         let covid = try JSONDecoder().decode(Covid.self, from: jsonData)
-                        print("SOS \(covid.date)")
+                        print("SOS NetworkManagerCovid \(covid.date ?? "")")
                         completionHandler(.success(covid))
                     } catch let error {
                         completionHandler(.failure(error))

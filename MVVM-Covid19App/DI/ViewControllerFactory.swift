@@ -8,21 +8,14 @@
 
 import UIKit
 
-//class ServiceFactory {
-//    private let networkManager: NetworkManagerCovid
-//    private let covidRepository: CovidRepository
-//}
-
 class ViewControllerFactory {
     
-    private let networkManager: NetworkManagerCovid
-    private let covidRepository: CovidRepository
+    private let serviceFactory: ServiceFactory
     private let viewModel: CovidViewModel
     
     init() {
-        self.networkManager = NetworkManagerCovid()
-        self.covidRepository = CovidRepository(networkManager: networkManager)
-        self.viewModel = CovidViewModel(covidRepository: covidRepository)
+        self.serviceFactory = ServiceFactory()
+        self.viewModel = CovidViewModel(covidRepository: self.serviceFactory.covidRepository)
     }
     
     func makeRootViewController() -> UIViewController {

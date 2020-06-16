@@ -50,8 +50,7 @@ class CountryCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // render()
-    func set(country: Country) {
+    func render(country: Country) {
         countryName.text = "Country: \(country.country)"
         newConfirmed.text = "NewConfirmed: \(country.newConfirmed)"
         totalConfirmed.text = "TotalConfirmed: \(country.totalConfirmed)"

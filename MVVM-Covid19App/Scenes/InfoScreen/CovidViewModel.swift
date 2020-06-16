@@ -13,7 +13,7 @@ protocol CovidViewModelProtocol {
     var countries: [Country] { get }
     var error: Error? { get }
     func showCountriesInfo(completion: @escaping () -> Void)
-    func showGlobalInfo()
+    func viewDidLoad()
     var updateViewData: ((GlobalInfoView.ViewState) ->())? { get set }
 }
 
@@ -30,7 +30,7 @@ final class CovidViewModel: CovidViewModelProtocol {
         self.covidRepository = covidRepository
     }
     
-    func showGlobalInfo() {
+    func viewDidLoad() {
         updateViewData?(.loading)
         
         covidRepository.loadCovidFromNetwork { [weak self] covid, error in

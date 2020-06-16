@@ -9,13 +9,6 @@
 import UIKit
 
 class GlobalInfoView: UIView {
-
-    // зачем вью хранит модель?
-//    var viewData: CovidViewData = .initial {
-//        didSet {
-//            setNeedsLayout()
-//        }
-//    }
     
     private lazy var stackView = update(UIStackView()) {
         $0.axis = .vertical
@@ -60,7 +53,6 @@ class GlobalInfoView: UIView {
     lazy var tableView = update(UITableView()) {
         $0.frame = self.bounds
         $0.rowHeight = 150
-//        $0.removeExcessCells()
         $0.register(CountryCell.self, forCellReuseIdentifier: CountryCell.reuseID)
     }
     
@@ -133,23 +125,6 @@ class GlobalInfoView: UIView {
             equal(\.widthAnchor, to: stackView, \.widthAnchor)
         ])
     }
-
-    // зачем layoutSubviews?
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        switch viewData {
-//        case .initial:
-//            print("SOS initial")
-//        case .loading:
-//            print("SOS loading")
-//        case .success(let success):
-//            activityIndicator.stopAnimating()
-//            _update(viewData: success)
-//        case .failure:
-//            print("SOS fail")
-//        }
-//    }
 }
 
 extension GlobalInfoView {
@@ -158,6 +133,7 @@ extension GlobalInfoView {
         case loading
         case success(Covid)
         case failure
+        case emptyState
     }
 
     func render(_ state: ViewState) {
@@ -174,6 +150,8 @@ extension GlobalInfoView {
             _render(viewData: success)
         case .failure:
             print("SOS fail")
+        case .emptyState:
+            print("SOS emptyState")
         }
     }
 
