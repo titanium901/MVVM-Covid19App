@@ -70,6 +70,14 @@ class GlobalInfoView: UIView {
         $0.color = .systemBlue
         $0.hidesWhenStopped = true
     }
+    
+    private lazy var loadGif = update(UIImageView()) {
+        guard let loadImage = UIImageView.fromGif(frame: self.frame, resourceName: "load") else
+        { return }
+        $0 = loadImage
+        $0.animationDuration = 1.2
+        loadImage.startAnimating()
+    }
 
     var tableViewDelegate: UITableViewDelegate? {
         get {
@@ -116,6 +124,14 @@ class GlobalInfoView: UIView {
             equal(\.centerYAnchor),
             equal(\.centerXAnchor)
         ])
+        
+        addSubview(loadGif, constraints: [
+            equal(\.topAnchor, \.safeAreaLayoutGuide.topAnchor, constant: 20),
+            equal(\.leadingAnchor, constant: 20),
+            equal(\.trailingAnchor, constant: -20),
+            equal(\.heightAnchor, to: stackView, \.heightAnchor),
+            equal(\.widthAnchor, to: stackView, \.widthAnchor)
+        ])
     }
 
     // зачем layoutSubviews?
@@ -152,6 +168,9 @@ extension GlobalInfoView {
             print("SOS loading")
         case .success(let success):
             activityIndicator.stopAnimating()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+                self?.loadGif.stopAnimating()
+            }
             _render(viewData: success)
         case .failure:
             print("SOS fail")
