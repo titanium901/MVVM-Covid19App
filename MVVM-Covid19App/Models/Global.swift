@@ -7,8 +7,10 @@
 //
 
 struct Global: Codable {
-    // так лучше не делать
-    let newConfirmed, totalConfirmed, newDeaths, totalDeaths: Int
+    let newConfirmed: Int
+    let totalConfirmed: Int
+    let newDeaths: Int
+    let totalDeaths: Int
     let newRecovered, totalRecovered: Int
 
     enum CodingKeys: String, CodingKey {
