@@ -46,6 +46,7 @@ class InfoViewController: UIViewController {
         // и заприватить tableView
         globalInfoView.tableView.delegate = self
         globalInfoView.tableView.dataSource = self
+        globalInfoView.render(.loading)
 
         viewModel.viewDidLoad()
         _subscribeOnChanges()
@@ -93,5 +94,11 @@ extension InfoViewController: UITableViewDataSource, UITableViewDelegate {
         let country = viewModel.countries[indexPath.row]
         cell.render(country: country) // render и будет datadriven
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let country = viewModel.countries[indexPath.row]
+        let destVC = DetailsInfoViewController()
+        present(destVC, animated: true)
     }
 }
