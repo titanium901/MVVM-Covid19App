@@ -17,7 +17,6 @@ class DetailInfoView: UIView {
     
     private lazy var countryNameLabel = update(UILabel()) {
         $0.applyGlobalStyle()
-        $0.text = "Date:"
     }
     
     private lazy var newConfirmedLabel = update(UILabel()) {
