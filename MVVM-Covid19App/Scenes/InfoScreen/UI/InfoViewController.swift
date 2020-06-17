@@ -29,6 +29,7 @@ class InfoViewController: UIViewController {
     }
     
     private var viewModel: CovidViewModel
+    private var coordinator: InfoViewCoordinator?
     
     init(viewModel: CovidViewModel) {
         self.viewModel = viewModel
@@ -41,6 +42,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        coordinator = InfoViewCoordinator(presenter: navigationController ?? UINavigationController())
         view.backgroundColor = .white
         // можно продублировать проперти в globalInfoView
         // и заприватить tableView
@@ -92,13 +94,13 @@ extension InfoViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CountryCell.reuseID) as! CountryCell
         let country = viewModel.countries[indexPath.row]
-        cell.render(country: country) // render и будет datadriven
+        cell.render(country: country)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let country = viewModel.countries[indexPath.row]
-        let destVC = DetailsInfoViewController()
-        present(destVC, animated: true)
+        globalInfoView.tableView.deselectRow(at: indexPath, animated: true)
+        coordinator?.presentDetailInfoViewController(with: country)
     }
 }

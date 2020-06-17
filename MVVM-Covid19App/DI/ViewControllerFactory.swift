@@ -34,7 +34,7 @@ class ViewControllerFactory {
     
     private func makeInfoViewController() -> UIViewController {
 //        let invoVC = InfoScreenAssembly(service: service)
-        let infoVC = InfoViewController(viewModel: viewModel)
+        let infoVC = UINavigationController(rootViewController: InfoViewController(viewModel: viewModel))
         infoVC.tabBarItem = UITabBarItem(
             title: "Info",
             image: UIImage(named: "infoIcon")?.withRenderingMode(.alwaysOriginal),
