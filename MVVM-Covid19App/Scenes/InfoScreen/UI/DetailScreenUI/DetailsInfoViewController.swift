@@ -18,7 +18,7 @@ class DetailsInfoViewController: UIViewController {
         view = DetailInfoView()
     }
     
-    let country: Country
+    private let country: Country
     
     init(country: Country) {
         self.country = country
