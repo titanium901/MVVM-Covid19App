@@ -42,14 +42,9 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        _configure()
         coordinator = InfoViewCoordinator(presenter: navigationController ?? UINavigationController())
-        view.backgroundColor = .white
-        // можно продублировать проперти в globalInfoView
-        // и заприватить tableView
-        globalInfoView.tableView.delegate = self
-        globalInfoView.tableView.dataSource = self
         globalInfoView.render(.loading)
-
         viewModel.viewDidLoad()
         _subscribeOnChanges()
     }
@@ -61,6 +56,13 @@ class InfoViewController: UIViewController {
         viewModel.showCountriesInfo {
             self.globalInfoView.tableView.reloadData()
         }
+    }
+    
+    private func _configure() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        view.backgroundColor = .white
+        globalInfoView.tableView.delegate = self
+        globalInfoView.tableView.dataSource = self
     }
 }
 

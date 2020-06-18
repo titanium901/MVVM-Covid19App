@@ -70,15 +70,6 @@ class GlobalInfoView: UIView {
         $0.animationDuration = 1.2
         loadImage.startAnimating()
     }
-
-    var tableViewDelegate: UITableViewDelegate? {
-        get {
-            tableView.delegate
-        }
-        set {
-            tableView.delegate = newValue
-        }
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

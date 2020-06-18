@@ -38,6 +38,9 @@
 		CAFAADEF249B5B2E00EFB6BF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADEE249B5B2E00EFB6BF /* AppCoordinator.swift */; };
 		CAFAADF1249B64E500EFB6BF /* TabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADF0249B64E500EFB6BF /* TabBarFactory.swift */; };
 		CAFAADF3249B726C00EFB6BF /* RootViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADF2249B726C00EFB6BF /* RootViewFactory.swift */; };
+		CAFAADFF249BA69E00EFB6BF /* DetailInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADFE249BA69E00EFB6BF /* DetailInfoAssembly.swift */; };
+		CAFAAE01249BA6D300EFB6BF /* NewsScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAAE00249BA6D300EFB6BF /* NewsScreenAssembly.swift */; };
+		CAFAAE03249BA6FA00EFB6BF /* MapScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAAE02249BA6FA00EFB6BF /* MapScreenAssembly.swift */; };
 		DA663795B00751E104CFDB53 /* Pods_MVVM_Covid19App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		CAFAADEE249B5B2E00EFB6BF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CAFAADF0249B64E500EFB6BF /* TabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFactory.swift; sourceTree = "<group>"; };
 		CAFAADF2249B726C00EFB6BF /* RootViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewFactory.swift; sourceTree = "<group>"; };
+		CAFAADFE249BA69E00EFB6BF /* DetailInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoAssembly.swift; sourceTree = "<group>"; };
+		CAFAAE00249BA6D300EFB6BF /* NewsScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenAssembly.swift; sourceTree = "<group>"; };
+		CAFAAE02249BA6FA00EFB6BF /* MapScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenAssembly.swift; sourceTree = "<group>"; };
 		EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Covid19App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,8 +120,9 @@
 			children = (
 				8E54612B249257FD00479E5B /* RootScreen */,
 				CA7BA34C248E662100EC168D /* InfoScreen */,
-				CA7BA35B248E71CE00EC168D /* NewsScreen */,
+				CA7BA398249A456E00EC168D /* DetailInfoScreen */,
 				CA7BA35A248E71BE00EC168D /* MapScreen */,
+				CA7BA35B248E71CE00EC168D /* NewsScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -126,7 +133,6 @@
 				CA7BA354248E718300EC168D /* InfoViewController.swift */,
 				CA7BA3742490E81800EC168D /* GlobalInfoView.swift */,
 				CA7BA3782491144700EC168D /* CountryCell.swift */,
-				CA7BA398249A456E00EC168D /* DetailScreenUI */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -252,8 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				8E54612A249255E400479E5B /* UI */,
-				CA7BA380249131C900EC168D /* CovidViewModel.swift */,
-				8EE012F024925FB800CA47FB /* InfoScreenAssembly.swift */,
+				CAFAADF4249BA60800EFB6BF /* Assembly */,
+				CAFAADF5249BA61D00EFB6BF /* ViewModel */,
 			);
 			path = InfoScreen;
 			sourceTree = "<group>";
@@ -270,7 +276,8 @@
 		CA7BA35A248E71BE00EC168D /* MapScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CA7BA356248E718F00EC168D /* MapViewController.swift */,
+				CAFAADFA249BA65600EFB6BF /* UI */,
+				CAFAADFD249BA67400EFB6BF /* Assembly */,
 			);
 			path = MapScreen;
 			sourceTree = "<group>";
@@ -278,7 +285,8 @@
 		CA7BA35B248E71CE00EC168D /* NewsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CA7BA358248E719800EC168D /* NewsViewController.swift */,
+				CAFAADF9249BA64F00EFB6BF /* UI */,
+				CAFAADFC249BA66C00EFB6BF /* Assembly */,
 			);
 			path = NewsScreen;
 			sourceTree = "<group>";
@@ -308,13 +316,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CA7BA398249A456E00EC168D /* DetailScreenUI */ = {
+		CA7BA398249A456E00EC168D /* DetailInfoScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CA7BA38C2499148300EC168D /* DetailsInfoViewController.swift */,
-				CA7BA396249A405500EC168D /* DetailInfoView.swift */,
+				CAFAADF6249BA62900EFB6BF /* UI */,
+				CAFAADFB249BA66400EFB6BF /* Assembly */,
 			);
-			path = DetailScreenUI;
+			path = DetailInfoScreen;
 			sourceTree = "<group>";
 		};
 		CA7BA399249A462700EC168D /* Coordinators */ = {
@@ -324,6 +332,71 @@
 				CA7BA394249A34DB00EC168D /* InfoViewCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CAFAADF4249BA60800EFB6BF /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				8EE012F024925FB800CA47FB /* InfoScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CAFAADF5249BA61D00EFB6BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA380249131C900EC168D /* CovidViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CAFAADF6249BA62900EFB6BF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA38C2499148300EC168D /* DetailsInfoViewController.swift */,
+				CA7BA396249A405500EC168D /* DetailInfoView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CAFAADF9249BA64F00EFB6BF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA358248E719800EC168D /* NewsViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CAFAADFA249BA65600EFB6BF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BA356248E718F00EC168D /* MapViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CAFAADFB249BA66400EFB6BF /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CAFAADFE249BA69E00EFB6BF /* DetailInfoAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CAFAADFC249BA66C00EFB6BF /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CAFAAE00249BA6D300EFB6BF /* NewsScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CAFAADFD249BA67400EFB6BF /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CAFAAE02249BA6FA00EFB6BF /* MapScreenAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,10 +525,13 @@
 				CA7BA37B2491174300EC168D /* UILabel+Ext.swift in Sources */,
 				CA7BA367248FBC4300EC168D /* CovidRepository.swift in Sources */,
 				CA7BA36A248FBFBF00EC168D /* Result+Ext.swift in Sources */,
+				CAFAAE03249BA6FA00EFB6BF /* MapScreenAssembly.swift in Sources */,
 				CA7BA359248E719800EC168D /* NewsViewController.swift in Sources */,
 				CAFAADF1249B64E500EFB6BF /* TabBarFactory.swift in Sources */,
 				CA7BA3872499004E00EC168D /* UIImage+Ext.swift in Sources */,
 				CA7BA3792491144700EC168D /* CountryCell.swift in Sources */,
+				CAFAADFF249BA69E00EFB6BF /* DetailInfoAssembly.swift in Sources */,
+				CAFAAE01249BA6D300EFB6BF /* NewsScreenAssembly.swift in Sources */,
 				CAFAADF3249B726C00EFB6BF /* RootViewFactory.swift in Sources */,
 				CA7BA35F248FAEC000EC168D /* NetworkManagerCovid.swift in Sources */,
 				CA7BA38D2499148300EC168D /* DetailsInfoViewController.swift in Sources */,
