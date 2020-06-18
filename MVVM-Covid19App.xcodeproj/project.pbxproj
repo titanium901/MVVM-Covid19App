@@ -35,6 +35,9 @@
 		CA7BA38D2499148300EC168D /* DetailsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA38C2499148300EC168D /* DetailsInfoViewController.swift */; };
 		CA7BA395249A34DB00EC168D /* InfoViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA394249A34DB00EC168D /* InfoViewCoordinator.swift */; };
 		CA7BA397249A405500EC168D /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA396249A405500EC168D /* DetailInfoView.swift */; };
+		CAFAADEF249B5B2E00EFB6BF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADEE249B5B2E00EFB6BF /* AppCoordinator.swift */; };
+		CAFAADF1249B64E500EFB6BF /* TabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADF0249B64E500EFB6BF /* TabBarFactory.swift */; };
+		CAFAADF3249B726C00EFB6BF /* RootViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADF2249B726C00EFB6BF /* RootViewFactory.swift */; };
 		DA663795B00751E104CFDB53 /* Pods_MVVM_Covid19App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		CA7BA38C2499148300EC168D /* DetailsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInfoViewController.swift; sourceTree = "<group>"; };
 		CA7BA394249A34DB00EC168D /* InfoViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewCoordinator.swift; sourceTree = "<group>"; };
 		CA7BA396249A405500EC168D /* DetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
+		CAFAADEE249B5B2E00EFB6BF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CAFAADF0249B64E500EFB6BF /* TabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFactory.swift; sourceTree = "<group>"; };
+		CAFAADF2249B726C00EFB6BF /* RootViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewFactory.swift; sourceTree = "<group>"; };
 		EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Covid19App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +142,8 @@
 		8E54612C2492580900479E5B /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				CAFAADF2249B726C00EFB6BF /* RootViewFactory.swift */,
+				CAFAADF0249B64E500EFB6BF /* TabBarFactory.swift */,
 				CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */,
 			);
 			path = DI;
@@ -312,6 +320,7 @@
 		CA7BA399249A462700EC168D /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				CAFAADEE249B5B2E00EFB6BF /* AppCoordinator.swift */,
 				CA7BA394249A34DB00EC168D /* InfoViewCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -430,6 +439,7 @@
 			files = (
 				8EE012F124925FB800CA47FB /* InfoScreenAssembly.swift in Sources */,
 				CA7BA381249131C900EC168D /* CovidViewModel.swift in Sources */,
+				CAFAADEF249B5B2E00EFB6BF /* AppCoordinator.swift in Sources */,
 				CA7BA35D248FACAF00EC168D /* Global.swift in Sources */,
 				CA7BA351248E6A0100EC168D /* ViewControllerFactory.swift in Sources */,
 				CA7BA38B24990ADC00EC168D /* ServiceFactory.swift in Sources */,
@@ -443,8 +453,10 @@
 				CA7BA367248FBC4300EC168D /* CovidRepository.swift in Sources */,
 				CA7BA36A248FBFBF00EC168D /* Result+Ext.swift in Sources */,
 				CA7BA359248E719800EC168D /* NewsViewController.swift in Sources */,
+				CAFAADF1249B64E500EFB6BF /* TabBarFactory.swift in Sources */,
 				CA7BA3872499004E00EC168D /* UIImage+Ext.swift in Sources */,
 				CA7BA3792491144700EC168D /* CountryCell.swift in Sources */,
+				CAFAADF3249B726C00EFB6BF /* RootViewFactory.swift in Sources */,
 				CA7BA35F248FAEC000EC168D /* NetworkManagerCovid.swift in Sources */,
 				CA7BA38D2499148300EC168D /* DetailsInfoViewController.swift in Sources */,
 				CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */,

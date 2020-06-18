@@ -11,17 +11,21 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var rootFactory: RootViewFactory!
+    var tabBarFactory: TabBarFactory!
     var viewControllerFactory: ViewControllerFactory!
+    var appCoordinator: AppCoordinator!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        viewControllerFactory = ViewControllerFactory()
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        window?.rootViewController = viewControllerFactory.makeRootViewController()
-        window?.makeKeyAndVisible()
+        viewControllerFactory = ViewControllerFactory()
+        tabBarFactory = TabBarFactory(factory: viewControllerFactory)
+        rootFactory = RootViewFactory(factory: tabBarFactory)
+        tabBarFactory = TabBarFactory(factory: viewControllerFactory)
+        appCoordinator = AppCoordinator(window: window!, factory: rootFactory)
+        appCoordinator.start()
     }
 }

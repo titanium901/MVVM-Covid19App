@@ -18,21 +18,7 @@ class ViewControllerFactory {
         self.viewModel = CovidViewModel(covidRepository: self.serviceFactory.covidRepository)
     }
     
-    func makeRootViewController() -> UIViewController {
-        RootViewController(mainTabBarController: makeTabBarViewController())
-    }
-    
-    private func makeTabBarViewController() -> UITabBarController {
-        let tabBar = UITabBarController()
-        tabBar.viewControllers = [
-            makeInfoViewController(),
-            makeMapViewController(),
-            makeNewsViewController()
-        ]
-        return tabBar
-    }
-    
-    private func makeInfoViewController() -> UIViewController {
+    func makeInfoViewController() -> UIViewController {
 //        let invoVC = InfoScreenAssembly(service: service)
         let infoVC = UINavigationController(rootViewController: InfoViewController(viewModel: viewModel))
         infoVC.tabBarItem = UITabBarItem(
@@ -43,7 +29,7 @@ class ViewControllerFactory {
         return infoVC
     }
     
-    private func makeMapViewController() -> UIViewController {
+    func makeMapViewController() -> UIViewController {
         let mapVC = MapViewController()
         mapVC.tabBarItem = UITabBarItem(
             title: "Map",
@@ -53,7 +39,7 @@ class ViewControllerFactory {
         return mapVC
     }
 
-    private func makeNewsViewController() -> UIViewController {
+    func makeNewsViewController() -> UIViewController {
         let newsVC = NewsViewController()
         newsVC.tabBarItem = UITabBarItem(
             title: "News",
@@ -61,5 +47,10 @@ class ViewControllerFactory {
             selectedImage: UIImage(named: "newsIcon")?.withRenderingMode(.alwaysOriginal)
         )
         return newsVC
+    }
+    
+    func makeDetailsInoViewController(with country: Country) -> UIViewController {
+        let detailsInfoVC = DetailsInfoViewController(country: country)
+        return detailsInfoVC
     }
 }

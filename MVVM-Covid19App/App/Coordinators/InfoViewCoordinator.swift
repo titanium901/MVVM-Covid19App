@@ -8,21 +8,23 @@
 
 import UIKit
 
-protocol Coordinator {
+protocol InfoViewCoordinatorProtocol {
   func presentDetailInfoViewController(with: Country)
 }
 
-class InfoViewCoordinator: Coordinator {
+class InfoViewCoordinator: InfoViewCoordinatorProtocol {
     
     private let presenter: UINavigationController
+    private let factory: ViewControllerFactory
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
+        self.factory = ViewControllerFactory()
     }
     
     func presentDetailInfoViewController(with country: Country) {
-        let detailsViewController = DetailsInfoViewController(country: country)
-        presenter.present(detailsViewController, animated: true)
+        let detailsInfoViewController = factory.makeDetailsInoViewController(with: country)
+        presenter.present(detailsInfoViewController, animated: true)
     }
 }
 
