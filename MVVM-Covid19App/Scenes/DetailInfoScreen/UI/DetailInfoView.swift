@@ -67,7 +67,6 @@ class DetailInfoView: UIView {
     private func _setupLayout() {
         addSubview(pimpView, constraints: [
             equal(\.topAnchor, \.safeAreaLayoutGuide.topAnchor, constant: 5),
-            equal(\.heightAnchor, constant: 10),
             equal(\.centerXAnchor),
             equal(\.widthAnchor, constant: 50),
             equal(\.heightAnchor, constant: 5)
