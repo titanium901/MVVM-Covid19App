@@ -10,6 +10,11 @@ import UIKit
 
 class DetailInfoView: UIView {
     
+    private lazy var pimpView = update(UIView()) {
+        $0.backgroundColor = .black
+        $0.layer.cornerRadius = 2.5
+    }
+    
     private lazy var stackView = update(UIStackView()) {
         $0.axis = .vertical
         $0.distribution = .equalSpacing
@@ -60,6 +65,14 @@ class DetailInfoView: UIView {
     }
     
     private func _setupLayout() {
+        addSubview(pimpView, constraints: [
+            equal(\.topAnchor, \.safeAreaLayoutGuide.topAnchor, constant: 5),
+            equal(\.heightAnchor, constant: 10),
+            equal(\.centerXAnchor),
+            equal(\.widthAnchor, constant: 50),
+            equal(\.heightAnchor, constant: 5)
+        ])
+        
         stackView.addArrangedSubview(countryNameLabel)
         stackView.addArrangedSubview(newConfirmedLabel)
         stackView.addArrangedSubview(totalConfirmedLabel)
