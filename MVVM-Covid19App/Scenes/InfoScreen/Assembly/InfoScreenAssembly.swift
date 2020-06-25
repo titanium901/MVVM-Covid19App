@@ -9,9 +9,12 @@
 import UIKit
 
 enum InfoScreenAssembly {
+    // Зачем отдавать всю фабрику со всеми всеми зависимостями?
     static func assembly(service: ServiceFactory) -> UIViewController {
         let viewModel = CovidViewModel(covidRepository: service.covidRepository)
         let vc = InfoViewController(viewModel: viewModel)
+        // модуль может возвращать только контроллер без навигейшена
+        // зачем ограничивать применение модуля?
         return UINavigationController(rootViewController: vc)
     }
 }

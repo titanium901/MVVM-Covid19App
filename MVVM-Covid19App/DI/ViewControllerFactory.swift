@@ -8,16 +8,19 @@
 
 import UIKit
 
+// ScreenFactory
 class ViewControllerFactory {
     
     private let serviceFactory: ServiceFactory
-    
+
+//    init(serviceFactory: ServiceFactory) {}
     init() {
         self.serviceFactory = ServiceFactory()
     }
     
     func makeInfoViewController() -> UIViewController {
         let infoVC = InfoScreenAssembly.assembly(service: serviceFactory)
+        // фабрика ничего не знает про tab bar item
         infoVC.tabBarItem = UITabBarItem(
             title: "Info",
             image: UIImage(named: "infoIcon")?.withRenderingMode(.alwaysOriginal),
