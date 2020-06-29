@@ -15,11 +15,11 @@ protocol InfoViewCoordinatorProtocol {
 class InfoViewCoordinator: InfoViewCoordinatorProtocol {
     
     private let presenter: UINavigationController
-    private let factory: ViewControllerFactory
+    private let factory: ScreenFactory
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
-        self.factory = ViewControllerFactory()
+        self.factory = ScreenFactory(serviceFactory: ServiceFactory())
     }
     
     func presentDetailInfoViewController(with country: Country) {

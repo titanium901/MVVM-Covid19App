@@ -12,7 +12,7 @@
 		CA7BA338248E63DA00EC168D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA337248E63DA00EC168D /* SceneDelegate.swift */; };
 		CA7BA33F248E63DC00EC168D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA33E248E63DC00EC168D /* Assets.xcassets */; };
 		CA7BA342248E63DC00EC168D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7BA340248E63DC00EC168D /* LaunchScreen.storyboard */; };
-		CA7BA351248E6A0100EC168D /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */; };
+		CA7BA351248E6A0100EC168D /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA350248E6A0100EC168D /* ScreenFactory.swift */; };
 		CA7BA353248E6B8300EC168D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA352248E6B8300EC168D /* RootViewController.swift */; };
 		CA7BA355248E718300EC168D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA354248E718300EC168D /* InfoViewController.swift */; };
 		CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA356248E718F00EC168D /* MapViewController.swift */; };
@@ -41,6 +41,7 @@
 		CAFAADFF249BA69E00EFB6BF /* DetailInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADFE249BA69E00EFB6BF /* DetailInfoAssembly.swift */; };
 		CAFAAE01249BA6D300EFB6BF /* NewsScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAAE00249BA6D300EFB6BF /* NewsScreenAssembly.swift */; };
 		CAFAAE03249BA6FA00EFB6BF /* MapScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAAE02249BA6FA00EFB6BF /* MapScreenAssembly.swift */; };
+		CAFAAE0524A9DCB200EFB6BF /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAAE0424A9DCB200EFB6BF /* AppFactory.swift */; };
 		DA663795B00751E104CFDB53 /* Pods_MVVM_Covid19App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +55,7 @@
 		CA7BA33E248E63DC00EC168D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA7BA341248E63DC00EC168D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA7BA343248E63DC00EC168D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		CA7BA350248E6A0100EC168D /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
 		CA7BA352248E6B8300EC168D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		CA7BA354248E718300EC168D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		CA7BA356248E718F00EC168D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		CAFAADFE249BA69E00EFB6BF /* DetailInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoAssembly.swift; sourceTree = "<group>"; };
 		CAFAAE00249BA6D300EFB6BF /* NewsScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenAssembly.swift; sourceTree = "<group>"; };
 		CAFAAE02249BA6FA00EFB6BF /* MapScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenAssembly.swift; sourceTree = "<group>"; };
+		CAFAAE0424A9DCB200EFB6BF /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		EB59FCBF7F6E997582358DBB /* Pods_MVVM_Covid19App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Covid19App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,8 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				CAFAADF2249B726C00EFB6BF /* RootViewFactory.swift */,
+				CAFAAE0424A9DCB200EFB6BF /* AppFactory.swift */,
 				CAFAADF0249B64E500EFB6BF /* TabBarFactory.swift */,
-				CA7BA350248E6A0100EC168D /* ViewControllerFactory.swift */,
+				CA7BA350248E6A0100EC168D /* ScreenFactory.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -514,7 +517,8 @@
 				CA7BA381249131C900EC168D /* CovidViewModel.swift in Sources */,
 				CAFAADEF249B5B2E00EFB6BF /* AppCoordinator.swift in Sources */,
 				CA7BA35D248FACAF00EC168D /* Global.swift in Sources */,
-				CA7BA351248E6A0100EC168D /* ViewControllerFactory.swift in Sources */,
+				CAFAAE0524A9DCB200EFB6BF /* AppFactory.swift in Sources */,
+				CA7BA351248E6A0100EC168D /* ScreenFactory.swift in Sources */,
 				CA7BA38B24990ADC00EC168D /* ServiceFactory.swift in Sources */,
 				CA7BA3732490E13A00EC168D /* AutoLayout.swift in Sources */,
 				CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */,

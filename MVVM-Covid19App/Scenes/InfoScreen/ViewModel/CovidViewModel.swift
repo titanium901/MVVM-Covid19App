@@ -24,9 +24,9 @@ final class CovidViewModel: CovidViewModelProtocol {
     var updateViewData: ((GlobalInfoView.ViewState) -> ())?
 
     // по умолчанию internal
-    internal var countries: [Country] = []
+    var countries: [Country] = []
     // как используешь?
-    internal var error: Error?
+    var error: Error?
     
     init(covidRepository: CovidRepository) {
         self.covidRepository = covidRepository

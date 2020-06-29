@@ -13,30 +13,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var rootFactory: RootViewFactory!
     var tabBarFactory: TabBarFactory!
-    var viewControllerFactory: ViewControllerFactory!
+    var screenFactory: ScreenFactory!
     var appCoordinator: AppCoordinator!
+    var appFactory: AppFactory!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
 
-        // можно инкапсулировать
-//        struct AppFactory {
-//            private let dependencies: ServiceFactory
-//            init(dependencies: ServiceFactory) {}
-//
-//            func makeAppCoordinator(window: UIWindow) -> AppCoordinator {
-//                AppCoordinator(window: window, dependencies: dependencies)
-//            }
-//        }
-
-        viewControllerFactory = ViewControllerFactory()
-        tabBarFactory = TabBarFactory(factory: viewControllerFactory)
+        screenFactory = ScreenFactory(serviceFactory: ServiceFactory())
+        tabBarFactory = TabBarFactory(factory: screenFactory)
         rootFactory = RootViewFactory(factory: tabBarFactory)
-        // зачем два раза?
-        tabBarFactory = TabBarFactory(factory: viewControllerFactory)
-        appCoordinator = AppCoordinator(window: window!, factory: rootFactory)
+        appFactory = AppFactory(factory: rootFactory)
+        appCoordinator = appFactory.makeAppCoordinator(window: window!)
         appCoordinator.start()
     }
 }

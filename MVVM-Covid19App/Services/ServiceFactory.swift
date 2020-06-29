@@ -13,12 +13,10 @@
 //class ServiceFactoryProd: ServiceFactory {}
 //class ServiceFactoryMock: ServiceFactory {}
 class ServiceFactory {
-//    let networkManager = NetworkManagerCovid()
-    let networkManager: NetworkManagerCovid
+    let networkManager = NetworkManagerCovid()
     let covidRepository: CovidRepository
     
     init() {
-        self.networkManager = NetworkManagerCovid()
         self.covidRepository = CovidRepository(networkManager: networkManager)
     }
 }

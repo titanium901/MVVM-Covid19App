@@ -8,19 +8,18 @@
 
 import UIKit
 
-// ScreenFactory
-class ViewControllerFactory {
+class ScreenFactory {
     
     private let serviceFactory: ServiceFactory
 
-//    init(serviceFactory: ServiceFactory) {}
-    init() {
+    init(serviceFactory: ServiceFactory) {
         self.serviceFactory = ServiceFactory()
     }
     
     func makeInfoViewController() -> UIViewController {
         let infoVC = InfoScreenAssembly.assembly(service: serviceFactory)
         // фабрика ничего не знает про tab bar item
+        // хз куда айтемы запихнуть - если закину в контроллеры то отображаются только при инициализации экрана
         infoVC.tabBarItem = UITabBarItem(
             title: "Info",
             image: UIImage(named: "infoIcon")?.withRenderingMode(.alwaysOriginal),
