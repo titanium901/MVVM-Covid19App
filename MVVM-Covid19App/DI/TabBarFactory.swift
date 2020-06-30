@@ -21,7 +21,7 @@ class TabBarFactory {
         tabBar.viewControllers = [
             UINavigationController(rootViewController: factory.makeInfoViewController()),
             factory.makeMapViewController(),
-            factory.makeNewsViewController()
+            UINavigationController(rootViewController: factory.makeNewsViewController())
         ]
         return tabBar
     }

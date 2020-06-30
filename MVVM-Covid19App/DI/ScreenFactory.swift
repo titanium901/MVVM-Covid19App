@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ScreenFactory {
     
@@ -39,7 +40,7 @@ class ScreenFactory {
     }
 
     func makeNewsViewController() -> UIViewController {
-        let newsVC = NewsScreenAssembly.assembly()
+        let newsVC = NewsScreenAssembly.assembly(service: serviceFactory.newsNetworkManager)
         newsVC.tabBarItem = UITabBarItem(
             title: "News",
             image: UIImage(named: "newsIcon")?.withRenderingMode(.alwaysOriginal),
@@ -50,5 +51,9 @@ class ScreenFactory {
     
     func makeDetailsInoViewController(with country: Country) -> UIViewController {
         DetailInfoScreenAssembly.assembly(with: country)
+    }
+    
+    func makeSafariViewController(with url: URL) -> SFSafariViewController {
+        SFSafariViewController(url: url)
     }
 }

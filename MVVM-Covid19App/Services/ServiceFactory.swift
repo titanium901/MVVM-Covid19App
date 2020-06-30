@@ -15,6 +15,7 @@
 class ServiceFactory {
     let networkManager = NetworkManagerCovid()
     let covidRepository: CovidRepository
+    let newsNetworkManager = NetworkManagerNews()
     
     init() {
         self.covidRepository = CovidRepository(networkManager: networkManager)
