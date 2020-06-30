@@ -37,6 +37,7 @@
 		CA7BA397249A405500EC168D /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BA396249A405500EC168D /* DetailInfoView.swift */; };
 		CAEFD26224AA39B30055C219 /* NewsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEFD26124AA39B30055C219 /* NewsViewCoordinator.swift */; };
 		CAEFD26424AB75790055C219 /* newsGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = CAEFD26324AB75790055C219 /* newsGif.gif */; };
+		CAEFD26624AB7DA20055C219 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEFD26524AB7DA20055C219 /* MapView.swift */; };
 		CAFAADEF249B5B2E00EFB6BF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADEE249B5B2E00EFB6BF /* AppCoordinator.swift */; };
 		CAFAADF1249B64E500EFB6BF /* TabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADF0249B64E500EFB6BF /* TabBarFactory.swift */; };
 		CAFAADF3249B726C00EFB6BF /* RootViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFAADF2249B726C00EFB6BF /* RootViewFactory.swift */; };
@@ -88,6 +89,7 @@
 		CA7BA396249A405500EC168D /* DetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
 		CAEFD26124AA39B30055C219 /* NewsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCoordinator.swift; sourceTree = "<group>"; };
 		CAEFD26324AB75790055C219 /* newsGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newsGif.gif; sourceTree = "<group>"; };
+		CAEFD26524AB7DA20055C219 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CAFAADEE249B5B2E00EFB6BF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CAFAADF0249B64E500EFB6BF /* TabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFactory.swift; sourceTree = "<group>"; };
 		CAFAADF2249B726C00EFB6BF /* RootViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewFactory.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				CA7BA356248E718F00EC168D /* MapViewController.swift */,
+				CAEFD26524AB7DA20055C219 /* MapView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				CA7BA38B24990ADC00EC168D /* ServiceFactory.swift in Sources */,
 				CA7BA3732490E13A00EC168D /* AutoLayout.swift in Sources */,
 				CA7BA357248E718F00EC168D /* MapViewController.swift in Sources */,
+				CAEFD26624AB7DA20055C219 /* MapView.swift in Sources */,
 				CA7BA336248E63DA00EC168D /* AppDelegate.swift in Sources */,
 				CAEFD26224AA39B30055C219 /* NewsViewCoordinator.swift in Sources */,
 				CA7BA395249A34DB00EC168D /* InfoViewCoordinator.swift in Sources */,

@@ -44,7 +44,6 @@ class NewsViewController: UIViewController {
         newsView.refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         newsView.collectionView.delegate = self
         newsView.collectionView.dataSource = self
-        view.backgroundColor = .white
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
