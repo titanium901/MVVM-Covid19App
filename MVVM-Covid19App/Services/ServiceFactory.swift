@@ -6,12 +6,18 @@
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
+// Можно в DI перенести
+
+// Проектирование на интерфейсах а не на реализации
+//protocol ServiceFactory {}
+//class ServiceFactoryProd: ServiceFactory {}
+//class ServiceFactoryMock: ServiceFactory {}
 class ServiceFactory {
-    let networkManager: NetworkManagerCovid
+    let networkManager = NetworkManagerCovid()
     let covidRepository: CovidRepository
+    let newsNetworkManager = NetworkManagerNews()
     
     init() {
-        self.networkManager = NetworkManagerCovid()
         self.covidRepository = CovidRepository(networkManager: networkManager)
     }
 }

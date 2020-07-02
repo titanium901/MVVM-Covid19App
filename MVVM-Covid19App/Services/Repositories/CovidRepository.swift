@@ -6,7 +6,27 @@
 //  Copyright © 2020 Iurii Popov. All rights reserved.
 //
 
- protocol LoadCovidInfo {
+// будет ли внешний код решать откуда загрузить данные?
+
+//protocol CovidInfoDataSource {
+//    func fetch(completion: @escaping (Covid?, Error?) -> Void)
+//}
+//protocol CovidInfoStorage: CovidInfoDataSource {}
+//protocol CovidInfoNetworkManager: CovidInfoDataSource {}
+//class CovidRepository: CovidInfoDataSource {
+//    let storage: CovidInfoDataSource
+//    let manager: CovidInfoDataSource
+//
+//    func fetch(completion: @escaping (Covid?, Error?) -> Void) {
+//        if internet {
+//            manager.fetch(completion: completion)
+//        } else {
+//            storage.fetch(completion: completion)
+//        }
+//    }
+//}
+
+protocol LoadCovidInfo {
     func loadCovidFromNetwork(completion: @escaping (Covid?, Error?) -> Void)
     func loadCovidFromDB()
 }

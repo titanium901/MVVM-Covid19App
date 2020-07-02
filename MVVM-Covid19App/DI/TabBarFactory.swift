@@ -10,18 +10,18 @@ import UIKit
 
 class TabBarFactory {
     
-    private let factory: ViewControllerFactory
+    private let factory: ScreenFactory
     
-    init(factory: ViewControllerFactory) {
+    init(factory: ScreenFactory) {
         self.factory = factory
     }
     
     func makeTabBarViewController() -> UITabBarController {
         let tabBar = UITabBarController()
         tabBar.viewControllers = [
-            factory.makeInfoViewController(),
+            UINavigationController(rootViewController: factory.makeInfoViewController()),
             factory.makeMapViewController(),
-            factory.makeNewsViewController()
+            UINavigationController(rootViewController: factory.makeNewsViewController())
         ]
         return tabBar
     }

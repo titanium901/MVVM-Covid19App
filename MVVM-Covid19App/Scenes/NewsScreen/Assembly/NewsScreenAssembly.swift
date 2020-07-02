@@ -9,8 +9,9 @@
 import UIKit
 
 enum NewsScreenAssembly {
-    static func assembly() -> UIViewController {
-        let vc = NewsViewController()
+    static func assembly(service: NetworkManagerNews) -> UIViewController {
+        let viewModel = NewsViewModel(newsManager: service)
+        let vc = NewsViewController(viewModel: viewModel)
         return vc
     }
 }
