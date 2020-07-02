@@ -26,3 +26,9 @@ class TabBarFactory {
         return tabBar
     }
 }
+
+struct TabBarDataSource {
+    enum Flow {
+        case info, map
+    }
+}

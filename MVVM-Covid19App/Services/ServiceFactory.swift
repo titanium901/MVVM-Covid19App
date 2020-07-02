@@ -13,9 +13,39 @@
 //class ServiceFactoryProd: ServiceFactory {}
 //class ServiceFactoryMock: ServiceFactory {}
 class ServiceFactory {
+    // Generic
     let networkManager = NetworkManagerCovid()
     let covidRepository: CovidRepository
     let newsNetworkManager = NetworkManagerNews()
+
+    // Module
+    var infoViewDependencies: InfoViewDependencies {
+        networkManager
+    }
+
+    // Module
+    var infoDetailsDependencies: InfoViewDependencies {
+        networkManager
+    }
+
+//    let networkManager = NetworkManagerCovid()
+//    let covidRepository: CovidRepository
+//    let newsNetworkManager = NetworkManagerNews()
+//    let networkManager = NetworkManagerCovid()
+//    let covidRepository: CovidRepository
+//    let newsNetworkManager = NetworkManagerNews()
+//    let networkManager = NetworkManagerCovid()
+//    let covidRepository: CovidRepository
+//    let newsNetworkManager = NetworkManagerNews()
+//    let networkManager = NetworkManagerCovid()
+//    let covidRepository: CovidRepository
+//    let newsNetworkManager = NetworkManagerNews()
+//    let networkManager = NetworkManagerCovid()
+//    let covidRepository: CovidRepository
+//    let newsNetworkManager = NetworkManagerNews()
+//    let networkManager = NetworkManagerCovid()
+//    let covidRepository: CovidRepository
+//    let newsNetworkManager = NetworkManagerNews()
     
     init() {
         self.covidRepository = CovidRepository(networkManager: networkManager)

@@ -16,7 +16,7 @@ import UIKit
  ?? свое решение
 */
 
-// добавим loading, emptystate
+// добавим loading, emptystate, error, FadeIn/FadeOut
 
 class InfoViewController: UIViewController {
     
@@ -105,5 +105,19 @@ extension InfoViewController: UITableViewDataSource, UITableViewDelegate {
         let country = viewModel.countries[indexPath.row]
         globalInfoView.tableView.deselectRow(at: indexPath, animated: true)
         coordinator?.presentDetailInfoViewController(with: country)
+    }
+}
+
+
+extension InfoViewController {
+    init() {
+        let sharedDependenies = ServiceFactory()
+
+    }
+}
+
+extension InfoViewController {
+    func openDetails() {
+
     }
 }

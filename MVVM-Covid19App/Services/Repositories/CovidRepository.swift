@@ -28,13 +28,14 @@
 
 protocol LoadCovidInfo {
     func loadCovidFromNetwork(completion: @escaping (Covid?, Error?) -> Void)
-    func loadCovidFromDB()
+    func loadCovidFromDB() -> Covid?
 }
 
 // зачем нужен?
 class CovidRepository: LoadCovidInfo {
     
     private let networkManager: NetworkManagerCovid!
+    private var result: Covid?
     // database
     
     init(networkManager: NetworkManagerCovid) {
@@ -44,15 +45,47 @@ class CovidRepository: LoadCovidInfo {
     // вроде одинаковый интерфейс с NetworkManagerCovid
     // protocol LoadCovidInfo {}
     func loadCovidFromNetwork(completion: @escaping (Covid?, Error?) -> Void) {
-        networkManager.getCovidStatus() { result in
+        networkManager.getCovidStatus() { [weak self] result in
             switch result {
             case .success(let covid):
                 completion(covid, nil)
+                self?.save(result: covid)
             case.failure(let error):
                 completion(nil, error)
             }
         }
     }
+
+    private func save(result: Covid) {
+        self.result = result
+    }
     
-    func loadCovidFromDB() {}
+    func loadCovidFromDB() -> Covid? {
+        result
+    }
 }
+
+// Кто должен хранить кэш?
+
+
+// Уровень модуля
+
+// Обработать действия пользователя
+// Разные экраны
+// Отсутствие интернета
+// Обработка ошибок
+// Анимации
+// Передача данных между модулями (вернуть результат)
+// Декомпозиция одного модуля на подмодули
+// Маппинг из доменной модели во вью модель
+// Бизнес логика (валидация)
+
+// -DI (singleton) -factory
+
+
+// Уровень приложения
+
+// Навигация
+// DI, список зависимостей
+// Общий стейт
+// Кэширование, БД
