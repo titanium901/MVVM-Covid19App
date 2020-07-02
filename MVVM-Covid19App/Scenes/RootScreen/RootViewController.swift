@@ -10,6 +10,8 @@ import UIKit
 
 // class RootViewController: UITabBarController
 // черный экран если так, не вдупляю
+
+// В помойку
 class RootViewController: UIViewController {
     
     private let mainTabBarController: UITabBarController

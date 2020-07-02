@@ -17,7 +17,7 @@ class CountryCell: UITableViewCell {
         $0.alignment = .leading
         $0.distribution = .fillEqually
     }
-    
+
     private let countryName = update(UILabel()) {
         $0.applyStyleForCountryCell()
     }

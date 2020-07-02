@@ -43,6 +43,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         _configure()
+        // Атата что это?
         coordinator = InfoViewCoordinator(presenter: navigationController ?? UINavigationController())
         globalInfoView.render(.loading)
         viewModel.viewDidLoad()

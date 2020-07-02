@@ -17,6 +17,6 @@ class RootViewFactory {
     }
     
     func makeRootViewController() -> UIViewController {
-        RootViewController(mainTabBarController: factory.makeTabBarViewController())
+        factory.makeTabBarViewController()
     }
 }
